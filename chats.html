@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Chats | Postcard</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <!-- Left Section -->
+                <div class="col-4">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Center Section with Search Bar -->
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                    <div class="searchbar">
+                        <i class="ri-search-line musicicon"></i>
+                        <input class="form-control custom-search-bar" type="search" placeholder="Search on Postcard" aria-label="Search">
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-envelope"></i>
+                                Shop
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-envelope"></i>
+                                Notifications
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-person"></i>
+                                Settings
+                            </a>
+                        </li>
+                        <!-- Profile Picture -->
+                        <li class="nav-item">
+                            <img src="assets/img/profile.jpg" alt="Profile Picture" class="profile-picture">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="sidebar-left">
+        <div class="container">
+            <div class="menu">
+                <a href="explore.html" class="">
+                    <span class="icon">
+                        <i class="ri-earth-line"></i>
+                        Explore
+                    </span>
+                </a>
+                <a href="footprint.html" class="">
+                    <span class="icon">
+                        <i class="ri-footprint-fill"></i>
+                        Footprint
+                    </span>
+                </a>
+                <a href="postcards.html" class="">
+                    <span class="icon">
+                        <i class="ri-mail-line"></i>
+                        Postcards
+                    </span>
+                </a>
+                <a href="diary.html" class="">
+                    <span class="icon">
+                        <i class="ri-article-line"></i>
+                        Diary
+                    </span>
+                </a>
+                <a href="friends.html" class="">
+                    <span class="icon">
+                        <i class="ri-group-2-line"></i>
+                        Friends
+                    </span>
+                </a>
+                <a href="chats.html" class="active">
+                    <span class="icon">
+                        <i class="ri-chat-1-line"></i>
+                        Chats
+                    </span>
+                </a>
+            </div>
+            <!-- Footer in the Sidebar -->
+            <div class="sidebar-footer">
+                <p>Postcard © 2023 - by @nickramen</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Right Sidebar -->
+    <div class="sidebar-right">
+        <div class="profile-statistics">
+            <h5>Your statistics</h5>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">3,465</div>
+                    <div class="statistic-description"><i class="ri-user-line"></i> Followers</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">1,987</div>
+                    <div class="statistic-description"><i class="ri-user-follow-line"></i> Following</div>
+                </div>
+            </div>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">68</div>
+                    <div class="statistic-description"><i class="ri-send-plane-line"></i> Postcards shared</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">24</div>
+                    <div class="statistic-description"><i class="ri-bookmark-line"></i> Postcards saved</div>
+                </div>
+            </div>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">382</div>
+                    <div class="statistic-description"><i class="ri-timer-2-line"></i> Joined days ago</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">9</div>
+                    <div class="statistic-description"><i class="ri-pushpin-line"></i> Countries visited</div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Statistics for postcards -->
+            <h5>Your postcard statistics</h5>
+
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">500</div>
+                    <div class="statistic-description"><i class="ri-printer-line"></i> Prints</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">200</div>
+                    <div class="statistic-description"><i class="ri-share-line"></i> Shares</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">1,000</div>
+                    <div class="statistic-description"><i class="ri-heart-line"></i> Likes</div>
+                </div>
+                <!-- Add more statistics for postcards as needed -->
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="row">
+            <!-- Chat List -->
+            <div class="col-md-4">
+                <div class="card chat-list">
+                    <div class="card-header">
+                        <h5>Chat List</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chat-item" onclick="displayChat(1)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <div class="chat-item" onclick="displayChat(2)">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <span>@nickramen</span>
+                            
+                        </div>
+                        <!-- Add more chat items as needed -->
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Selected Chat Display -->
+            <div class="col-md-8">
+                <div class="card selected-chat" id="selectedChat">
+                    <div class="card-header">
+                        <h5>Selected Chat</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Display selected chat content here -->
+                        <!-- Sample Chat Content -->
+                        <div id="chat1" class="chat-content" style="display: none;">
+                            <div class="message">
+                                <span class="sender">You:</span>
+                                <span class="text">Hey there! How's it going?</span>
+                            </div>
+                            <div class="message">
+                                <span class="sender">@nickramen:</span>
+                                <span class="text">Hi! I'm doing well, thanks. How about you?</span>
+                            </div>
+                            <div class="message">
+                                <span class="sender">You:</span>
+                                <span class="text">I'm good too. What are you up to?</span>
+                            </div>
+                            <div class="message">
+                                <span class="sender">@nickramen:</span>
+                                <span class="text">Just working on some projects. How about grabbing coffee later?</span>
+                            </div>
+                            <!-- Add more messages as needed -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="assets/js/scripts.js"></script>
+
+</body>
+</html>

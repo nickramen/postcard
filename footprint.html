@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Footprint | Postcard</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <!-- Left Section -->
+                <div class="col-4">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Center Section with Search Bar -->
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                    <div class="searchbar">
+                        <i class="ri-search-line musicicon"></i>
+                        <input class="form-control custom-search-bar" type="search" placeholder="Search on Postcard" aria-label="Search">
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-envelope"></i>
+                                Shop
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-envelope"></i>
+                                Notifications
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-person"></i>
+                                Settings
+                            </a>
+                        </li>
+                        <!-- Profile Picture -->
+                        <li class="nav-item">
+                            <img src="assets/img/profile.jpg" alt="Profile Picture" class="profile-picture">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="sidebar-left">
+        <div class="container">
+            <div class="menu">
+                <a href="explore.html" class="">
+                    <span class="icon">
+                        <i class="ri-earth-line"></i>
+                        Explore
+                    </span>
+                </a>
+                <a href="footprint.html" class="active">
+                    <span class="icon">
+                        <i class="ri-footprint-fill"></i>
+                        Footprint
+                    </span>
+                </a>
+                <a href="postcards.html" class="">
+                    <span class="icon">
+                        <i class="ri-mail-line"></i>
+                        Postcards
+                    </span>
+                </a>
+                <a href="diary.html" class="">
+                    <span class="icon">
+                        <i class="ri-article-line"></i>
+                        Diary
+                    </span>
+                </a>
+                <a href="friends.html" class="">
+                    <span class="icon">
+                        <i class="ri-group-2-line"></i>
+                        Friends
+                    </span>
+                </a>
+                <a href="chats.html" class="">
+                    <span class="icon">
+                        <i class="ri-chat-1-line"></i>
+                        Chats
+                    </span>
+                </a>
+            </div>
+            <!-- Footer in the Sidebar -->
+            <div class="sidebar-footer">
+                <p>Postcard © 2023 - by @nickramen</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Right Sidebar -->
+    <div class="sidebar-right">
+        <div class="profile-statistics">
+            <h5>Your statistics</h5>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">3,465</div>
+                    <div class="statistic-description"><i class="ri-user-line"></i> Followers</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">1,987</div>
+                    <div class="statistic-description"><i class="ri-user-follow-line"></i> Following</div>
+                </div>
+            </div>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">68</div>
+                    <div class="statistic-description"><i class="ri-send-plane-line"></i> Postcards shared</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">24</div>
+                    <div class="statistic-description"><i class="ri-bookmark-line"></i> Postcards saved</div>
+                </div>
+            </div>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">382</div>
+                    <div class="statistic-description"><i class="ri-timer-2-line"></i> Joined days ago</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">9</div>
+                    <div class="statistic-description"><i class="ri-pushpin-line"></i> Countries visited</div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Statistics for postcards -->
+            <h5>Your postcard statistics</h5>
+
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">500</div>
+                    <div class="statistic-description"><i class="ri-printer-line"></i> Prints</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">200</div>
+                    <div class="statistic-description"><i class="ri-share-line"></i> Shares</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">1,000</div>
+                    <div class="statistic-description"><i class="ri-heart-line"></i> Likes</div>
+                </div>
+                <!-- Add more statistics for postcards as needed -->
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div id="create-postcard-section" style="width: 100%;">
+            <div id="postcard-box" class="d-flex align-items-center">
+                <img src="assets/img/profile.jpg" alt="Profile Picture" width="40" height="40">
+                <div class="postcard-description flex-grow-1">
+                    <input class="form-control" type="search" placeholder="Time to add a new footprint!" aria-label="Search">
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Card with Footprint Charts -->
+        <div class="row mb-3">
+            <div class="col-md-12 mb-12">
+                <div class="card">
+                    <div class="card-header" style="text-align: center;">
+                        <h5>My Stats</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3 col-6">
+                                <div class="small-box" style="background-color: #F9F871;">
+                                    <div class="inner">
+                                        <h3 style="font-weight: bold;">53%</h3>
+                                        <p>World footprint</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="ri-earth-fill"></i>
+                                    </div>
+                                    <a href="#" class="small-box-footer">More info <i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-6">
+                                <div class="small-box" style="background-color: #ABFB95;">
+                                    <div class="inner">
+                                        <h3 style="font-weight: bold;">2</h3>
+                                        <p>Total continents</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="ri-map-2-line"></i>
+                                    </div>
+                                    <a href="#" class="small-box-footer">More info <i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-6">
+                                <div class="small-box" style="background-color: #5BF6C5;">
+                                    <div class="inner">
+                                        <h3 style="font-weight: bold;">5</h3>
+                                        <p>Total countries</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="ri-plane-fill"></i>
+                                    </div>
+                                    <a href="#" class="small-box-footer">More info <i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-6">
+                                <div class="small-box" style="background-color: #00E9EE;">
+                                    <div class="inner">
+                                        <h3 style="font-weight: bold;">18</h3>
+                                        <p>Total Cities</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+                                    <a href="#" class="small-box-footer">More info <i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Single Card with World Map SVG -->
+        <div class="row mb-3">
+            <div class="col-md-12 mb-12">
+                <!-- Bootstrap Card -->
+                <div class="card">
+                    <div class="card-header" style="text-align: center;">
+                        <h5>World Map</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="assets/img/worldmap.jpg" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12 mb-12">
+                <!-- Bootstrap Card -->
+                <div class="card">
+                    <div class="card-header" style="text-align: center;">
+                        <h5>Footprint Timeline</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="footprint-main">
+                            <div class="footprint-container">
+                                <ul>
+                                    <li>
+                                        <h3 class="footprint-heading">El Salvador</h3>
+                                        <p>San Benito  - 27/01/2021</p>
+                                        <p>Santa Tecla - 27/01/2021</p>
+
+                                        <span class="footprint-date">November 2023</span>
+                                        <span class="footprint-circle"></span>
+                                    </li>
+                                    <li>
+                                        <h3 class="footprint-heading">El Salvador</h3>
+                                        <p>27/01/2021 - San Benito</p>
+                                        <p>27/01/2021 - Santa Tecla</p>
+
+                                        <span class="footprint-date">September 2023</span>
+                                        <span class="footprint-circle"></span>
+                                    </li>
+                                    <li>
+                                        <h3 class="footprint-heading">South Korea</h3>
+                                        <p>Ulsan - 27/01/2021</p>
+                                        <p>Cheongju - 27/01/2021</p>
+                                        <p>Seoul - 27/01/2021</p>
+                                        <p>Gangnam - 27/01/2021</p>
+                                        <p>Seoul - 27/01/2021</p>
+
+                                        <span class="footprint-date">August 2023</span>
+                                        <span class="footprint-circle"></span>
+                                    </li>
+                                    <li>
+                                        <h3 class="footprint-heading">Japan</h3>
+                                        <p>27/01/2021 - Fukoka</p>
+
+                                        <span class="footprint-date">August 2023</span>
+                                        <span class="footprint-circle"></span>
+                                    </li>
+                                    <li>
+                                        <h3 class="footprint-heading">South Korea</h3>
+                                        <p>Incheon - 27/01/2021</p>
+                                        <p>Seoul - 27/01/2021</p>
+                                        <p>Myeongdong - 27/01/2021</p>
+                                        <p>Seoul - 27/01/2021</p>
+                                        <p>Jeju - 27/01/2021</p>
+                                        <p>Ulsan - 27/01/2021</p>
+                                        <p>Gyeonju - 27/01/2021</p>
+                                        <p>Ulsan - 27/01/2021</p>
+                                        
+                                        <span class="footprint-date">July 2023</span>
+                                        <span class="footprint-circle"></span>
+                                    </li>
+                                    <li>
+                                        <h3 class="footprint-heading">Honduras</h3>
+                                        <p>27/01/2021 - Siguatepeque</p>
+                                        <p>27/01/2021 - Comayagua</p>
+                                        <p>27/01/2021 - Tegucigalpa</p>
+                                        <p>27/01/2021 - Santa Lucía</p>
+                                        <p>27/01/2021 - Valle de Ángeles</p>
+                                        <p>27/01/2021 - Cantarranas</p>
+                                        <p>27/01/2021 - Tela</p>
+                                        <p>27/01/2021 - Yoro</p>
+                                        <p>27/01/2021 - San Pedro Sula</p>
+                                        
+                                        <span class="footprint-date">October 2022</span>
+                                        <span class="footprint-circle"></span>
+                                    </li>
+                                    <li>
+                                        <h3 class="footprint-heading">Honduras</h3>
+                                        <p>San Pedro Sula - 27/01/2021</p>
+                                        <p>Los Naranjos - 27/01/2021</p>
+                                        <p>La Lima - 27/01/2021</p>
+                                        
+                                        <span class="footprint-date">September 2022</span>
+                                        <span class="footprint-circle"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

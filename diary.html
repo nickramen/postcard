@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Diary | Postcard</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <!-- Left Section -->
+                <div class="col-4">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Center Section with Search Bar -->
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                    <div class="searchbar">
+                        <i class="ri-search-line musicicon"></i>
+                        <input class="form-control custom-search-bar" type="search" placeholder="Search on Postcard" aria-label="Search">
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-envelope"></i>
+                                Shop
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-envelope"></i>
+                                Notifications
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-person"></i>
+                                Settings
+                            </a>
+                        </li>
+                        <!-- Profile Picture -->
+                        <li class="nav-item">
+                            <img src="assets/img/profile.jpg" alt="Profile Picture" class="profile-picture">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="sidebar-left">
+        <div class="container">
+            <div class="menu">
+                <a href="explore.html" class="">
+                    <span class="icon">
+                        <i class="ri-earth-line"></i>
+                        Explore
+                    </span>
+                </a>
+                <a href="footprint.html" class="">
+                    <span class="icon">
+                        <i class="ri-footprint-fill"></i>
+                        Footprint
+                    </span>
+                </a>
+                <a href="postcards.html" class="">
+                    <span class="icon">
+                        <i class="ri-mail-line"></i>
+                        Postcards
+                    </span>
+                </a>
+                <a href="diary.html" class="active">
+                    <span class="icon">
+                        <i class="ri-article-line"></i>
+                        Diary
+                    </span>
+                </a>
+                <a href="friends.html" class="">
+                    <span class="icon">
+                        <i class="ri-group-2-line"></i>
+                        Friends
+                    </span>
+                </a>
+                <a href="chats.html" class="">
+                    <span class="icon">
+                        <i class="ri-chat-1-line"></i>
+                        Chats
+                    </span>
+                </a>
+            </div>
+            <!-- Footer in the Sidebar -->
+            <div class="sidebar-footer">
+                <p>Postcard © 2023 - by @nickramen</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Right Sidebar -->
+    <div class="sidebar-right">
+        <div class="profile-statistics">
+            <h5>Your statistics</h5>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">3,465</div>
+                    <div class="statistic-description"><i class="ri-user-line"></i> Followers</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">1,987</div>
+                    <div class="statistic-description"><i class="ri-user-follow-line"></i> Following</div>
+                </div>
+            </div>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">68</div>
+                    <div class="statistic-description"><i class="ri-send-plane-line"></i> Postcards shared</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">24</div>
+                    <div class="statistic-description"><i class="ri-bookmark-line"></i> Postcards saved</div>
+                </div>
+            </div>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">382</div>
+                    <div class="statistic-description"><i class="ri-timer-2-line"></i> Joined days ago</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">9</div>
+                    <div class="statistic-description"><i class="ri-pushpin-line"></i> Countries visited</div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Statistics for postcards -->
+            <h5>Your postcard statistics</h5>
+
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">500</div>
+                    <div class="statistic-description"><i class="ri-printer-line"></i> Prints</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">200</div>
+                    <div class="statistic-description"><i class="ri-share-line"></i> Shares</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">1,000</div>
+                    <div class="statistic-description"><i class="ri-heart-line"></i> Likes</div>
+                </div>
+                <!-- Add more statistics for postcards as needed -->
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div id="create-postcard-section" style="width: 100%;">
+            <div id="postcard-box" class="d-flex align-items-center">
+                <img src="assets/img/profile.jpg" alt="Profile Picture" width="40" height="40">
+                <div class="postcard-description flex-grow-1">
+                    <input class="form-control" type="search" placeholder="Write today's diary!" aria-label="Search">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Blog Feed -->
+        <div class="blog-feed">
+            <!-- Year 2023 -->
+            <div class="year">
+                <h3>2023</h3>
+                <!-- Month - Date (January 1) -->
+                <div class="month-date">
+                    <h4 style="color: #009BF9;">February</h4>
+                    <div class="card blog-item mb-2">
+                        <div class="card-body d-flex align-items-start">
+                            <!-- Cover Image on the Left -->
+                            <img src="assets/img/blog-cover1.jpg" alt="Blog Post Image" style="width: 150px; margin-right: 20px;">
+                            <!-- Blog Information on the Right -->
+                            <div>
+                                <div class="post-meta mb-3">
+                                    <span>@nickramen</span>
+                                    <span class="text-muted small">February 7, 2023</span>
+                                    <div class="social-interactions">
+                                        <i class="ri-heart-line"></i> 365
+                                        <i class="ri-discuss-line"></i> 17
+                                        <i class="ri-bookmark-line"></i> 92
+                                        <i class="ri-share-forward-line"></i> 5
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Title of the Diary</h3>
+                                <p class="post-content">
+                                    Description of the diary post goes here. You can provide insights, share experiences, and more.
+                                </p>
+                                <!-- Add more content as needed -->
+                            </div>
+                        </div>
+                    </div>                       
+                </div>
+                
+                <br>
+                <!-- Month - Date (January 1) -->
+                <div class="month-date">
+                    <h4 style="color: #009BF9;">January</h4>
+                    <!-- Blog Item -->
+                    <div class="card blog-item mb-2">
+                        <div class="card-body d-flex align-items-start">
+                            <!-- Cover Image on the Left -->
+                            <img src="assets/img/blog-cover1.jpg" alt="Blog Post Image" style="width: 150px; margin-right: 20px;">
+                            <!-- Blog Information on the Right -->
+                            <div>
+                                <div class="post-meta mb-3">
+                                    <span>@nickramen</span>
+                                    <span class="text-muted small">January 23, 2023</span>
+                                    <div class="social-interactions">
+                                        <i class="ri-heart-line"></i> 365
+                                        <i class="ri-discuss-line"></i> 17
+                                        <i class="ri-bookmark-line"></i> 92
+                                        <i class="ri-share-forward-line"></i> 5
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Title of the Diary</h3>
+                                <p class="post-content">
+                                    Description of the diary post goes here. You can provide insights, share experiences, and more.
+                                </p>
+                                <!-- Add more content as needed -->
+                            </div>
+                        </div>
+                    </div> 
+                    <!-- End Blog Item -->
+                    <!-- Blog Item -->
+                    <div class="card blog-item mb-2">
+                        <div class="card-body d-flex align-items-start">
+                            <!-- Cover Image on the Left -->
+                            <img src="assets/img/blog-cover1.jpg" alt="Blog Post Image" style="width: 150px; margin-right: 20px;">
+                            <!-- Blog Information on the Right -->
+                            <div>
+                                <div class="post-meta mb-3">
+                                    <span>@nickramen</span>
+                                    <span class="text-muted small">January 2, 2023</span>
+                                    <div class="social-interactions">
+                                        <i class="ri-heart-line"></i> 365
+                                        <i class="ri-discuss-line"></i> 17
+                                        <i class="ri-bookmark-line"></i> 92
+                                        <i class="ri-share-forward-line"></i> 5
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Title of the Diary</h3>
+                                <p class="post-content">
+                                    Description of the diary post goes here. You can provide insights, share experiences, and more.
+                                </p>
+                                <!-- Add more content as needed -->
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="year">
+                <h3>2022</h3>
+                <!-- Month - Date (January 1) -->
+                <div class="month-date">
+                    <h4 style="color: #009BF9;">December</h4>
+                    <div class="card blog-item">
+                        <div class="card-body d-flex align-items-start">
+                            <!-- Cover Image on the Left -->
+                            <img src="assets/img/blog-cover1.jpg" alt="Blog Post Image" style="width: 150px; margin-right: 20px;">
+                            <!-- Blog Information on the Right -->
+                            <div>
+                                <div class="post-meta mb-3">
+                                    <span>@nickramen</span>
+                                    <span class="text-muted small">December 18, 2022</span>
+                                    <div class="social-interactions">
+                                        <i class="ri-heart-line"></i> 365
+                                        <i class="ri-discuss-line"></i> 17
+                                        <i class="ri-bookmark-line"></i> 92
+                                        <i class="ri-share-forward-line"></i> 5
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Title of the Diary</h3>
+                                <p class="post-content">
+                                    Description of the diary post goes here. You can provide insights, share experiences, and more.
+                                </p>
+                                <!-- Add more content as needed -->
+                            </div>
+                        </div>
+                    </div>                       
+                </div>
+            </div>
+
+            <div class="year">
+                <h3>2021</h3>
+                <!-- Month - Date (January 1) -->
+                <div class="month-date">
+                    <h4 style="color: #009BF9;">June</h4>
+                    <div class="card blog-item">
+                        <div class="card-body d-flex align-items-start">
+                            <!-- Cover Image on the Left -->
+                            <img src="assets/img/blog-cover1.jpg" alt="Blog Post Image" style="width: 150px; margin-right: 20px;">
+                            <!-- Blog Information on the Right -->
+                            <div>
+                                <div class="post-meta mb-3">
+                                    <span>@nickramen</span>
+                                    <span class="text-muted small">June 7, 2021</span>
+                                    <div class="social-interactions">
+                                        <i class="ri-heart-line"></i> 365
+                                        <i class="ri-discuss-line"></i> 17
+                                        <i class="ri-bookmark-line"></i> 92
+                                        <i class="ri-share-forward-line"></i> 5
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Title of the Diary</h3>
+                                <p class="post-content">
+                                    Description of the diary post goes here. You can provide insights, share experiences, and more.
+                                </p>
+                                <!-- Add more content as needed -->
+                            </div>
+                        </div>
+                    </div>                       
+                </div>
+            </div>
+
+            <div class="year">
+                <h3>2020</h3>
+                <!-- Month - Date (January 1) -->
+                <div class="month-date">
+                    <h4 style="color: #009BF9;">April</h4>
+                    <div class="card blog-item">
+                        <div class="card-body d-flex align-items-start">
+                            <!-- Cover Image on the Left -->
+                            <img src="assets/img/blog-cover1.jpg" alt="Blog Post Image" style="width: 150px; margin-right: 20px;">
+                            <!-- Blog Information on the Right -->
+                            <div>
+                                <div class="post-meta mb-3">
+                                    <span>@nickramen</span>
+                                    <span class="text-muted small">April 4, 2021</span>
+                                    <div class="social-interactions">
+                                        <i class="ri-heart-line"></i> 365
+                                        <i class="ri-discuss-line"></i> 17
+                                        <i class="ri-bookmark-line"></i> 92
+                                        <i class="ri-share-forward-line"></i> 5
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Title of the Diary</h3>
+                                <p class="post-content">
+                                    Description of the diary post goes here. You can provide insights, share experiences, and more.
+                                </p>
+                                <!-- Add more content as needed -->
+                            </div>
+                        </div>
+                    </div>                       
+                </div>
+                <!-- Month - Date (January 1) -->
+                <div class="month-date">
+                    <h4 style="color: #009BF9;">March</h4>
+                    <div class="card blog-item">
+                        <div class="card-body d-flex align-items-start">
+                            <!-- Cover Image on the Left -->
+                            <img src="assets/img/blog-cover1.jpg" alt="Blog Post Image" style="width: 150px; margin-right: 20px;">
+                            <!-- Blog Information on the Right -->
+                            <div>
+                                <div class="post-meta mb-3">
+                                    <span>@nickramen</span>
+                                    <span class="text-muted small">March 28, 2021</span>
+                                    <div class="social-interactions">
+                                        <i class="ri-heart-line"></i> 365
+                                        <i class="ri-discuss-line"></i> 17
+                                        <i class="ri-bookmark-line"></i> 92
+                                        <i class="ri-share-forward-line"></i> 5
+                                    </div>
+                                </div>
+                                <h3 class="post-title">Title of the Diary</h3>
+                                <p class="post-content">
+                                    Description of the diary post goes here. You can provide insights, share experiences, and more.
+                                </p>
+                                <!-- Add more content as needed -->
+                            </div>
+                        </div>
+                    </div>                       
+                </div>
+            </div>
+
+        </div>
+        <!-- End Blog Feed -->
+    </div>
+    <!-- End Main Content -->
+    
+
+
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

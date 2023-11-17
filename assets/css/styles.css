@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f2faff;
+    margin: 0;
+    padding: 0;
+}
+
+/*------------ Login and Signup container ------------*/
+.box-area{
+    width: 930px;
+}
+
+/*------------ Right box ------------*/
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+.left-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #88c3fb;
+}
+
+/*------------ Custom Placeholder ------------*/
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+/*------------ Button ------------*/
+.btn-general{
+    width: 100%;
+    background-color: #009bf9;
+    color: white;
+}
+.btn-general:hover{
+    width: 100%;
+    background-color: #009bf9;
+    color: white;
+}
+
+
+/*------------ INDEX ------------*/
+/*------------ Navbar  ------------*/
+.navbar {
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.custom-search-bar {
+    width: 200px;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.searchbar{
+    display: flex;
+    align-items: center;
+    background: rgb(233, 232, 232);
+    width: 600px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d6d8db;
+}
+.searchbar .musicicon{
+    color: #009BF9;
+    margin-left: 10px;
+}
+.searchbar input{
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 7px;
+}
+.icon i{
+    font-size: 24px;
+}
+
+
+/*------------ Sidebars ------------*/
+/* Left Sidebar */
+.sidebar-left {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    color: #FFFFFF;
+}
+/* Right Sidebar */
+.sidebar-right {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 60px;
+}
+
+/*------------ Main Content  ------------*/
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    padding-top: 75px;
+    width: 50%;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+.sidebar-footer h5 {
+    margin-bottom: 10px;
+    color: black;
+    font-size: 18px;
+}
+
+.sidebar-footer p {
+    margin-bottom: 0;
+    color: black;
+    font-size: 12px;
+}
+
+.menu{
+    padding-top: 15px;
+}
+.menu a {
+    list-style: none;
+    width: 100%;
+    font-size: 12px;
+    color: black;
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+    position: relative; /* Add relative positioning for pseudo-elements */
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+.menu a:hover{
+    color: #009BF9;
+    background-color: rgba(0, 155, 249, 0.1);
+}
+.menu .active{
+    color: #009BF9;
+    background-color: rgba(0, 155, 249, 0.1);
+}
+.menu .icon{
+    margin-left: 10px;
+    font-size: 18px;
+}
+.menu a:hover::before,
+.menu .active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    margin-right: 10px;
+    background: #009BF9;
+}
+.menu a:link, a:visited {
+    text-decoration: none;
+}
+
+/*------------ Profile Statistics  ------------*/
+.profile-statistics {
+    margin-top: 15px;
+}
+/* Statistic Row */
+.statistic-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+/* Statistic Item */
+.statistic-item {
+    width: 48%; /* Adjust as needed to leave some space between items */
+}
+/* Statistic Number */
+.statistic-number {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* Statistic Description */
+.statistic-description {
+    font-size: 14px;
+}
+
+
+/*------------ Create Postcard  ------------*/
+#create-postcard-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#postcard-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#postcard-box img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/*------------ Postcard Feed  ------------*/
+.postcard {
+    perspective: 1000px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    width: 100%;
+    aspect-ratio: 6 / 4;
+}
+
+.postcard:hover {
+    transform: rotateY(180deg);
+}
+
+.postcard div {
+    backface-visibility: hidden;
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+
+/*------------ Postcard Footer bx to comment  ------------*/
+
+/* Comments Section */
+.comments-section {
+    border-top: 1px solid #ced0d4;
+}
+
+/* Individual Comment Styling */
+.comment {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #E6F4F1;
+}
+
+.comment img {
+    margin-right: 10px;
+}
+
+.comment-text span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* New Comment Input Box Styling */
+.new-comment {
+    margin-top: 10px;
+}
+
+.new-comment img {
+    margin-right: 10px;
+}
+
+/* Adjustments for Responsive Design */
+@media (max-width: 768px) {
+    .comments-section {
+        padding-top: 20px;
+    }
+
+    .comment img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+
+    .new-comment img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+}
+
+/* Add styling for threaded (reply) comments */
+.reply {
+    margin-left: 30px; /* Adjust the margin to create an indentation for reply comments */
+    background-color: #f8f8f8;
+}
+
+/* Add styling for comment dates */
+.comment-date {
+    font-size: 12px;
+    color: #888;
+}
+
+
+/* Adjustments for Responsive Design */
+@media (max-width: 768px) {
+    .comments-section {
+        padding-top: 20px;
+    }
+
+    .comment img,
+    .reply img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+
+    .new-comment img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+}
+
+
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px){
+    .box-area{
+    margin: 0 10px;
+    }
+    .left-box{
+    height: 100px;
+    overflow: hidden;
+    }
+    .right-box{
+    padding: 20px;
+    }
+}
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px){
+    .box-area{
+    margin: 0 10px;
+    }
+    .left-box{
+    height: 100px;
+    overflow: hidden;
+    }
+    .right-box{
+    padding: 20px;
+    }
+}
+
+/*------------ Diary timeline------------*/
+.year {
+    margin-top: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.year:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 100%;
+    width: 10px;
+    background: #88C3FB;
+    border-radius: 5px;
+}
+
+.month-date {
+    margin-top: 10px;
+    position: relative;
+}
+
+.timeline-content {
+    flex-grow: 1;
+}
+
+.post-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+}
+
+.social-interactions i {
+    margin-right: 5px;
+}
+
+.year h3 {
+    margin-left: 10px;
+}
+.blog-item{
+    margin-left: 30px;
+}
+.month-date h4{
+    margin-left: 30px;
+}
+
+
+/*------------Footprint Boxes------------*/
+
+.small-box {
+    position: relative;
+}
+
+.small-box p, h3{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
+.small-box .inner {
+    padding: 20px;
+}
+
+.small-box .icon {
+    position: absolute;
+    top: 30%;
+    right: 0; /* Adjust the right margin as needed */
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, .15);
+    z-index: 0;
+}
+
+.small-box .icon > i {
+    font-size: 70px;
+    transition: transform .3s linear;
+}
+
+.small-box:hover .icon > i {
+    transform: scale(1.1);
+}
+
+.small-box .small-box-footer {
+    background-color: rgba(0, 0, 0, .1);
+    color: black;
+    display: block;
+    padding: 3px 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    z-index: 10;
+}
+
+/*------------ Footprint timeline------------*/
+.footprint-main {
+	width: 100%;
+	height: auto;
+	display: grid;
+	place-items: center;
+	padding: 50px 0 0;
+}
+.footprint-main {
+	font-size: 29px;
+	color: rgba(0, 155, 249);
+	position: relative;
+	font-weight: 500;
+}
+
+.footprint-container {
+	width: 70%;
+	height: auto;
+	margin: auto 0;
+	position: relative;
+}
+.footprint-container ul {
+	list-style: none;
+}
+.footprint-container ul::after {
+	content: " ";
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	background-image: linear-gradient(to bottom, rgba(0, 155, 249, 0.747), rgba(91, 246, 197, 0.747));
+}
+.footprint-container ul li {
+	width: 50%;
+	height: auto;
+	padding: 15px 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.218);
+	position: relative;
+	margin-bottom: 30px;
+	z-index: 99;
+}
+.footprint-container ul li:nth-child(4) {
+	margin-bottom: 0;
+}
+.footprint-container ul li .footprint-circle {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #5BF6C5;
+	top: 0;
+	display: grid;
+	place-items: center;
+}
+.footprint-circle::after{
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	background-color: #009BF9;
+	border-radius: 50%;
+}
+ul li:nth-child(odd) .footprint-circle {
+	transform: translate(50%, -50%);
+	right: -30px;
+}
+ul li:nth-child(even) .footprint-circle {
+	transform: translate(-50%, -50%);
+	left: -30px;
+}
+ul li .footprint-date {
+	position: absolute;
+	width: 130px;
+	height: 33px;
+	background-image: linear-gradient(to right,#009BF9,#5BF6C5);
+	border-radius: 15px;
+	top: -45px;
+	display: grid;
+	place-items: center;
+	color: #fff;
+	font-size: 13px;
+	box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.318);
+}
+.footprint-container ul li:nth-child(odd) {
+	float: left;
+	clear: right;
+	text-align: right;
+	transform: translateX(-30px);
+}
+ul li:nth-child(odd) .footprint-date {
+	right: 20px;
+}
+.footprint-container ul li:nth-child(even) {
+	float: right;
+	clear: left;
+	transform: translateX(30px);
+}
+ul li .footprint-heading {
+	font-size: 17px;
+	color: rgb(0, 155, 249);
+}
+ul li p {
+	font-size: 13px;
+	color: #666;
+	line-height: 18px;
+	margin: 6px 0 4px 0;
+}
+ul li a {
+	font-size: 13px;
+	text-decoration: none;
+	color: rgb(0, 155, 249);
+	transition: all 0.3s ease;
+}
+
+
+@media only screen and (min-width:798px) and (max-width: 1100px) {
+	.footprint-container{
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 798px) {
+	.footprint-container{
+		width: 70%;
+		transform: translateX(20px);
+	}
+	.footprint-container ul::after{
+		left: -40px;
+	}
+	.footprint-container ul li {
+		width: 100%;
+		float: none;
+		clear: none;
+		margin-bottom: 80px;
+	}
+	.footprint-container ul li .footprint-circle{
+		left: -40px;
+		transform: translate(-50%, -50%);
+	}
+	.footprint-container ul li .footprint-date{
+		left: 20px;
+	}
+	.footprint-container ul li:nth-child(odd) {
+		transform: translateX(0px);
+		text-align: left;
+	}
+	.footprint-container ul li:nth-child(even) {
+		transform: translateX(0px);
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.footprint-container{
+		width: 80%;
+	}
+	.footprint-container ul::after{
+		left: -20px;
+	}
+	.footprint-container ul li .footprint-circle{
+		left: -20px;
+	}
+}
+
+
+
+
+
+/* Card styling for Chat List */
+.chat-list {
+    height: calc(100vh - 110px); /* Viewport height minus navbar height */
+}
+.chat-list .card-body{
+    overflow-y: auto;
+}
+
+.chat-item {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.chat-item:hover {
+    background-color: #eee;
+}
+
+/* Card styling for Selected Chat Display */
+.selected-chat {
+    height: calc(100vh - 110px); /* Viewport height minus navbar height */
+    overflow-y: auto;
+}
+
+/* Bootstrap Card styling */
+.card {
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    padding: 10px;
+}
