@@ -76,7 +76,7 @@
                 </a>
                 <a href="footprint.html" class="">
                     <span class="icon">
-                        <i class="ri-footprint-fill"></i>
+                        <i class="ri-footprint-line"></i>
                         Footprint
                     </span>
                 </a>
@@ -104,6 +104,12 @@
                         Chats
                     </span>
                 </a>
+                <a href="chats.html" class="">
+                    <span class="icon">
+                        <i class="ri-bookmark-line"></i>
+                        Saved
+                    </span>
+                </a>
             </div>
             <!-- Footer in the Sidebar -->
             <div class="sidebar-footer">
@@ -116,7 +122,7 @@
     <!-- Right Sidebar -->
     <div class="sidebar-right">
         <div class="profile-statistics">
-            <h5>Your statistics</h5>
+            <h5>Profile</h5>
             <div class="statistic-row">
                 <div class="statistic-item">
                     <div class="statistic-number">3,465</div>
@@ -130,28 +136,27 @@
             <div class="statistic-row">
                 <div class="statistic-item">
                     <div class="statistic-number">68</div>
-                    <div class="statistic-description"><i class="ri-send-plane-line"></i> Postcards shared</div>
+                    <div class="statistic-description"><i class="ri-send-plane-line"></i> Posts shared</div>
                 </div>
                 <div class="statistic-item">
                     <div class="statistic-number">24</div>
-                    <div class="statistic-description"><i class="ri-bookmark-line"></i> Postcards saved</div>
+                    <div class="statistic-description"><i class="ri-bookmark-line"></i> Posts saved</div>
                 </div>
             </div>
             <div class="statistic-row">
                 <div class="statistic-item">
-                    <div class="statistic-number">382</div>
-                    <div class="statistic-description"><i class="ri-timer-2-line"></i> Joined days ago</div>
+                    <div class="statistic-number">382 <span class="small text-muted">days ago</span></div>
+                    <div class="statistic-description"><i class="ri-timer-2-line"></i> Member since</div>
                 </div>
                 <div class="statistic-item">
                     <div class="statistic-number">9</div>
-                    <div class="statistic-description"><i class="ri-pushpin-line"></i> Countries visited</div>
+                    <div class="statistic-description"><i class="ri-pushpin-line"></i> Countries</div>
                 </div>
             </div>
             <hr>
 
             <!-- Statistics for postcards -->
-            <h5>Your postcard statistics</h5>
-
+            <h5>Postcards</h5>
             <div class="statistic-row">
                 <div class="statistic-item">
                     <div class="statistic-number">500</div>
@@ -168,6 +173,20 @@
                 <!-- Add more statistics for postcards as needed -->
             </div>
             <hr>
+
+            <!-- Statistics for credits -->
+            <h5>Credits</h5>
+            <div class="statistic-row">
+                <div class="statistic-item">
+                    <div class="statistic-number">500</div>
+                    <div class="statistic-description"><i class="ri-coin-line"></i> Coins</div>
+                </div>
+                <div class="statistic-item">
+                    <div class="statistic-number">35</div>
+                    <div class="statistic-description"><i class="ri-vip-diamond-line"></i> Diamonds</div>
+                </div>
+            </div>
+            <hr>
         </div>
     </div>
 
@@ -178,75 +197,119 @@
             <div class="col-md-4">
                 <div class="card chat-list">
                     <div class="card-header">
-                        <h5>Chat List</h5>
+                        <h5>Chats</h5>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body">                       
                         <div class="chat-item" onclick="displayChat(1)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
+                            <div class="chat-picture">
+                                <img src="assets/img/profile.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="chat-info">
+                                <div class="top-row">
+                                    <h5 class="chat-name">@nickramen</h5>
+                                    <span class="chat-last-message-hour">10:46 AM</span>
+                                </div>
+                                <div class="bottom-row">
+                                    <p class="chat-last-message">Ponéte a hacer tarea vo pucha</p>
+                                    <div class="seen-status">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
+                        <div class="chat-item" onclick="displayChat(1)">
+                            <div class="chat-picture">
+                                <img src="assets/img/profile.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="chat-info">
+                                <div class="top-row">
+                                    <h5 class="chat-name">@nickramen</h5>
+                                    <span class="chat-last-message-hour">10:46 AM</span>
+                                </div>
+                                <div class="bottom-row">
+                                    <p class="chat-last-message">Ponéte a hacer tarea vo pucha</p>
+                                    <div class="seen-status">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
+                        <div class="chat-item" onclick="displayChat(1)">
+                            <div class="chat-picture">
+                                <img src="assets/img/profile.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="chat-info">
+                                <div class="top-row">
+                                    <h5 class="chat-name">@nickramen</h5>
+                                    <span class="chat-last-message-hour">10:46 AM</span>
+                                </div>
+                                <div class="bottom-row">
+                                    <p class="chat-last-message">Ponéte a hacer tarea vo pucha</p>
+                                    <div class="seen-status">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
+                        <div class="chat-item" onclick="displayChat(1)">
+                            <div class="chat-picture">
+                                <img src="assets/img/profile.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="chat-info">
+                                <div class="top-row">
+                                    <h5 class="chat-name">@nickramen</h5>
+                                    <span class="chat-last-message-hour">10:46 AM</span>
+                                </div>
+                                <div class="bottom-row">
+                                    <p class="chat-last-message">Ponéte a hacer tarea vo pucha</p>
+                                    <div class="seen-status">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
+
+                        <div class="chat-item" onclick="displayChat(1)">
+                            <div class="chat-picture">
+                                <img src="assets/img/profile.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="chat-info">
+                                <div class="top-row">
+                                    <h5 class="chat-name">@nickramen</h5>
+                                    <span class="chat-last-message-hour">10:46 AM</span>
+                                </div>
+                                <div class="bottom-row">
+                                    <p class="chat-last-message">Ponéte a hacer tarea vo pucha</p>
+                                    <div class="seen-status">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
-                        </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
-                        </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
-                        </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
-                        </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
-                        </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
-                        </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
-                        </div>
-                        <div class="chat-item" onclick="displayChat(2)">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <span>@nickramen</span>
-                            
+                        <div class="chat-item" onclick="displayChat(1)">
+                            <div class="chat-picture">
+                                <img src="assets/img/profile.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="chat-info">
+                                <div class="top-row">
+                                    <h5 class="chat-name">@nickramen</h5>
+                                    <span class="chat-last-message-hour">10:46 AM</span>
+                                </div>
+                                <div class="bottom-row">
+                                    <p class="chat-last-message">Ponéte a hacer tarea vo pucha</p>
+                                    <div class="seen-status">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- Add more chat items as needed -->
+                    </div>
+                    <div class="card-footer">
+                        <div class="chat-searchbar mb-2">
+                            <i class="ri-search-line musicicon"></i>
+                            <input class="form-control custom-search-bar" type="search" placeholder="Search a chat" aria-label="Search">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -255,31 +318,40 @@
             <div class="col-md-8">
                 <div class="card selected-chat" id="selectedChat">
                     <div class="card-header">
-                        <h5>Selected Chat</h5>
+                        <img src="assets/img/profile-pic.png" class="rounded-circle" width="30" height="30" alt="Profile Picture">
+                        <h5>Select a chat</h5>
                     </div>
                     <div class="card-body">
                         <!-- Display selected chat content here -->
-                        <!-- Sample Chat Content -->
-                        <div id="chat1" class="chat-content" style="display: none;">
-                            <div class="message">
-                                <span class="sender">You:</span>
-                                <span class="text">Hey there! How's it going?</span>
+                        <div class="messages">
+                            <!-- Message 1 -->
+                            <div class="message received">
+                                <div class="message-content">
+                                    Hey Nicole! I just read an article about the best brunch spots in town. Guess who came to mind? 😏🥞
+                                </div>
                             </div>
-                            <div class="message">
-                                <span class="sender">@nickramen:</span>
-                                <span class="text">Hi! I'm doing well, thanks. How about you?</span>
+                        
+                            <!-- Message 2 -->
+                            <div class="message sent">
+                                <div class="message-content">
+                                    Haha, I can't resist a good brunch! What are the top contenders? 🍳🥓
+                                </div>
                             </div>
-                            <div class="message">
-                                <span class="sender">You:</span>
-                                <span class="text">I'm good too. What are you up to?</span>
-                            </div>
-                            <div class="message">
-                                <span class="sender">@nickramen:</span>
-                                <span class="text">Just working on some projects. How about grabbing coffee later?</span>
-                            </div>
+                        
                             <!-- Add more messages as needed -->
+                        
                         </div>
+                        
+                    </div>
 
+                    <div class="card-footer">
+                        <!-- Input Box for New Comment -->
+                        <div class="new-comment d-flex align-items-center">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="30" height="30" alt="Profile Picture">
+                            <input type="text" class="form-control ms-2" placeholder="Type a message...">
+                            <button class="btn btn-secondary ms-2"><i class="ri-emoji-sticker-line"></i></button>
+                            <button class="btn btn-primary ms-2"><i class="ri-send-plane-2-line"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -288,9 +360,9 @@
 
 
 </div>
+<!-- 
 
-
-<script src="assets/js/scripts.js"></script>
+<script src="assets/js/scripts.js"></script> -->
 
 </body>
 </html>

@@ -80,6 +80,15 @@ body{
     border-radius: 10px;
     border: 1px solid #d6d8db;
 }
+
+/* Remove styles on focus */
+.searchbar input:focus {
+    border: initial !important;
+    outline: initial !important;
+    box-shadow: none !important; /* Add this to remove any box-shadow effect */
+    background: initial !important;
+    margin-left: initial !important;
+}
 .searchbar .musicicon{
     color: #009BF9;
     margin-left: 10px;
@@ -99,7 +108,7 @@ body{
 /* Left Sidebar */
 .sidebar-left {
     height: 100%;
-    width: 20%;
+    width: 15%;
     position: fixed;
     top: 0;
     left: 0;
@@ -109,7 +118,7 @@ body{
 /* Right Sidebar */
 .sidebar-right {
     height: 100%;
-    width: 20%;
+    width: 15%;
     position: fixed;
     top: 0;
     right: 0;
@@ -122,7 +131,7 @@ body{
     margin-right: auto;
     padding: 15px;
     padding-top: 75px;
-    width: 50%;
+    width: 60%;
 }
 
 .sidebar-footer {
@@ -254,9 +263,58 @@ body{
     right: 0;
     bottom: 0;
 }
-
 .back {
     transform: rotateY(180deg);
+}
+
+.complete-view-postcard{
+    height: 60vh;
+}
+.complete-postcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Set height to 100% to ensure it takes the full height of the parent container */
+    padding: 20px;
+    background-color: #E6F4F1;
+}
+
+/* Style for the Extended Description Column */
+.post-description {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    height: 60vh;
+    max-height: 60vh;
+}
+
+/* Style for the Post Description Text */
+.post-description h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.post-description p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+/* Style for Hashtags */
+.post-description p span {
+    color: #007bff; /* Hashtag color */
+    font-weight: bold;
+}
+/* Style for Badges or Tags */
+.badges {
+    margin-top: 10px;
+}
+.badge {
+    margin-right: 5px;
+    font-size: 12px;
+    padding: 8px 12px;
+    background-color: #FCFCD4;
+    color: gray;
+    margin-bottom: 5px;
 }
 
 
@@ -264,7 +322,9 @@ body{
 
 /* Comments Section */
 .comments-section {
-    border-top: 1px solid #ced0d4;
+    border: 1px solid #ced0d4;
+    background-color: white;
+    padding: 20px;
 }
 
 /* Individual Comment Styling */
@@ -272,23 +332,28 @@ body{
     display: flex;
     align-items: center;
     font-size: 14px;
-    padding: 10px;
-    background-color: #E6F4F1;
+    padding-bottom: 5px;
+    
 }
 
+/* .comment-text{
+    background-color: #F2FAFF;
+    padding: 10px;
+    border-radius: 10px;
+} */
 .comment img {
     margin-right: 10px;
 }
 
 .comment-text span {
-    font-weight: bold;
     margin-right: 5px;
 }
 
 /* New Comment Input Box Styling */
-.new-comment {
+/* .new-comment {
+    
     margin-top: 10px;
-}
+} */
 
 .new-comment img {
     margin-right: 10px;
@@ -316,13 +381,19 @@ body{
 /* Add styling for threaded (reply) comments */
 .reply {
     margin-left: 30px; /* Adjust the margin to create an indentation for reply comments */
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
 }
+/* .reply .comment-text{
+    background-color: #F2FAFF;
+    padding: 10px;
+    border-radius: 10px;
+} */
 
 /* Add styling for comment dates */
 .comment-date {
     font-size: 12px;
     color: #888;
+    font-weight: 100;
 }
 
 
@@ -376,61 +447,57 @@ body{
 
 /*------------ Diary timeline------------*/
 .year {
-    margin-top: 20px;
     position: relative;
-    padding-left: 20px;
+    /* padding-left: 20px; */
 }
 
-.year:before {
+/* .year:before {
     content: "";
     position: absolute;
     top: 0;
     left: 10px;
     height: 100%;
     width: 10px;
-    background: #88C3FB;
+    background-image: linear-gradient(to bottom,#009BF9,#5BF6C5);
     border-radius: 5px;
-}
+} */
 
 .month-date {
-    margin-top: 10px;
     position: relative;
 }
 
 .timeline-content {
     flex-grow: 1;
 }
-
-.post-title {
+/* .post-title {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
-
 .post-content {
     margin-bottom: 10px;
-}
-
+} */
 .post-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #777;
 }
-
 .social-interactions i {
     margin-right: 5px;
 }
-
-.year h3 {
+/* .year h3 {
     margin-left: 10px;
-}
+} */
 .blog-item{
     margin-left: 30px;
 }
-.month-date h4{
-    margin-left: 30px;
+.blog-item img{
+    border-radius: 5px;
 }
-
+/* .month-date h4{
+    margin-left: 10px;
+}
+ */
 
 /*------------Footprint Boxes------------*/
 
@@ -438,9 +505,9 @@ body{
     position: relative;
 }
 
-.small-box p, h3{
+.small-box p, .small-box h3{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    color: black;
+    color: white;
 }
 
 .small-box .inner {
@@ -501,9 +568,9 @@ body{
 	list-style: none;
 }
 .footprint-container ul::after {
-	content: " ";
+	content: "";
 	position: absolute;
-	width: 2px;
+	width: 3px;
 	height: 100%;
 	left: 50%;
 	top: 0;
@@ -543,11 +610,11 @@ body{
 }
 ul li:nth-child(odd) .footprint-circle {
 	transform: translate(50%, -50%);
-	right: -30px;
+	right: -14px;
 }
 ul li:nth-child(even) .footprint-circle {
 	transform: translate(-50%, -50%);
-	left: -30px;
+	left: -16px;
 }
 ul li .footprint-date {
 	position: absolute;
@@ -569,12 +636,15 @@ ul li .footprint-date {
 	transform: translateX(-30px);
 }
 ul li:nth-child(odd) .footprint-date {
-	right: 20px;
+	right: 0;
+}
+ul li:nth-child(even) .footprint-date {
+	left: 0;
 }
 .footprint-container ul li:nth-child(even) {
 	float: right;
 	clear: left;
-	transform: translateX(30px);
+	/* transform: translateX(30px); */
 }
 ul li .footprint-heading {
 	font-size: 17px;
@@ -654,16 +724,62 @@ ul li a {
     overflow-y: auto;
 }
 
+
 .chat-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
     cursor: pointer;
-    padding: 10px;
     border-bottom: 1px solid #ddd;
     transition: background-color 0.3s;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-
 .chat-item:hover {
     background-color: #eee;
 }
+.chat-picture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.chat-name{
+    font-size: 14px;
+    margin: 0 0 0 0;
+}
+.chat-last-message{
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    color: gray;
+}
+.chat-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.chat-last-message-hour {
+    color: #009BF9;
+    margin: 0;
+    font-size: 14px;
+}
+.seen-status {
+    font-size: 18px;
+    color: green;
+}
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 /* Card styling for Selected Chat Display */
 .selected-chat {
@@ -671,11 +787,294 @@ ul li a {
     overflow-y: auto;
 }
 
-/* Bootstrap Card styling */
-.card {
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.message {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
 }
-.card-body {
+
+.message-content {
+    background: #eaeaea;
     padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.message.sent .message-content {
+    background: #88C3FB;
+    color: #0053B5;
+}
+
+
+
+
+.chat-searchbar{
+    display: flex;
+    align-items: center;
+    background: rgb(233, 232, 232);
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d6d8db;
+}
+/* Remove styles on focus */
+.chat-searchbar input:focus {
+    border: initial !important;
+    outline: initial !important;
+    box-shadow: none !important; /* Add this to remove any box-shadow effect */
+    background: initial !important;
+    margin-left: initial !important;
+}
+.chat-searchbar .musicicon{
+    color: #009BF9;
+    margin-left: 10px;
+}
+.chat-searchbar input{
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 7px;
+}
+.chat-searchbar .icon i{
+    font-size: 24px;
+}
+
+.selected-chat .card-header {
+    display: flex;
+    align-items: center; /* Center vertically within the flex container */
+}
+
+.selected-chat .card-header img {
+    margin-right: 10px; /* Adjust as needed to add space between the image and the heading */
+}
+
+
+
+
+
+.paper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 5px 0px #888;
+}
+
+.paper::before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    height: 100%;
+    width: 2px;
+    background: rgba(255, 0, 0, 0.4);
+}
+
+.image {
+    position: absolute;
+    top: 25px;
+    left: 60px;
+}
+
+.image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adjust the shadow as needed */
+}
+
+.lines {
+    height: calc(100% - 40px);
+    width: 100%;
+    background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
+}
+
+.meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #003360;
+}
+
+.text {
+    position: absolute;
+    top: 25px;
+    left: 60px; /* Adjust for image width and spacing */
+    bottom: 10px;
+    right: 15px;
+    line-height: 25px;
+    font-family: 'Indie Flower';
+    overflow: hidden;
+    outline: none;
+}
+
+.holes {
+    position: absolute;
+    left: 10px;
+    height: 25px;
+    width: 25px;
+    background: #F1FAFF;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 2px 0px #888;
+}
+
+.hole-top {
+    top: 10%;
+}
+
+.hole-middle {
+    top: 50%;
+}
+
+.hole-bottom {
+    bottom: 10%;
+}
+
+
+
+.wrapper {
+    margin: 0; 
+    padding: 15px;
+}
+
+/* Note styles */
+.note-wrap {
+    width: 100%;
+    position: relative;
+    font-size: 24px;
+    vertical-align: top;
+    display: inline-block;
+    font-family: Englebert, Arial;
+    color:#4b453c;
+    background: #F7E999;
+    line-height: 34px; 
+    text-align: center;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    &:before  {
+        display: block;
+        content: ""; 
+        background: rgba(227, 200, 114, 0.40);
+        width: 130px;
+        height: 28px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 6px/18px 0;
+        position: absolute;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-2deg);
+    }
+    
+}
+
+
+.note-blue {
+    height: 100%;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+
+.note-blue img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* WebKit Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #009BF9; /* Thumb color */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #E6F4F1; /* Track color */
+}
+
+/* Optional: Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #009BF9;
+}
+
+
+
+
+
+
+/* Custom Card Styles */
+.custom-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Custom Card Header Styles */
+.custom-card-header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Custom Card Body Styles */
+.custom-card-body {
+    padding: 10px;
+    background-color: white;
+}
+
+/* Profile Section Styles */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Profile Picture Styles */
+.profile-picture-friend {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+}
+
+/* Online Status Indicator Styles */
+.online-status-indicator {
+    border: 3px solid #5FAF64; /* Set the border color as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    width: 90px; /* Adjust the size as needed */
+    height: 90px; /* Adjust the size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Custom Card Footer Styles */
+.custom-card-footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+/* Button Styles */
+.btn {
+    margin-top: 5px;
 }
