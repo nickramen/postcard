@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&display=swap');
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     background: #f2faff;
     margin: 0;
     padding: 0;
@@ -503,6 +504,8 @@ body{
 
 .small-box {
     position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .small-box p, .small-box h3{
@@ -860,40 +863,50 @@ ul li a {
 
 
 .paper {
-    position: relative;
-    height: 100%;
+    height: auto;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 0px 5px 0px #888;
+    position: relative; /* Relative positioning for child elements */
 }
-
 .paper::before {
     content: '';
     position: absolute;
     left: 45px;
     height: 100%;
     width: 2px;
-    background: rgba(255, 0, 0, 0.4);
+    background: rgba(255,0,0,0.4);
 }
-
-.image {
-    position: absolute;
-    top: 25px;
-    left: 60px;
-}
-
-.image img {
-    width: 120px;
-    height: 120px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adjust the shadow as needed */
-}
-
 .lines {
-    height: calc(100% - 40px);
+    margin-bottom: 20px;
     width: 100%;
     background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
+}
+.text {
+    position: relative;
+    padding: 50px;
+    line-height: 25px;
+    font-family: 'Indie Flower';
+    overflow: hidden;
+    outline: none;
+}
+.holes {
+    position: absolute;
+    left: 10px;
+    height: 25px;
+    width: 25px;
+    background: #EFFAFF;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 2px 0px #888;
+}
+.hole-top {
+    top: 10%;
+}
+.hole-middle {
+    top: 50%;
+}
+.hole-bottom {
+    bottom: 10%;
 }
 
 .meta{
@@ -902,95 +915,6 @@ ul li a {
     align-items: center;
     font-weight: bold;
     color: #003360;
-}
-
-.text {
-    position: absolute;
-    top: 25px;
-    left: 60px; /* Adjust for image width and spacing */
-    bottom: 10px;
-    right: 15px;
-    line-height: 25px;
-    font-family: 'Indie Flower';
-    overflow: hidden;
-    outline: none;
-}
-
-.holes {
-    position: absolute;
-    left: 10px;
-    height: 25px;
-    width: 25px;
-    background: #F1FAFF;
-    border-radius: 50%;
-    box-shadow: inset 0px 0px 2px 0px #888;
-}
-
-.hole-top {
-    top: 10%;
-}
-
-.hole-middle {
-    top: 50%;
-}
-
-.hole-bottom {
-    bottom: 10%;
-}
-
-
-
-.wrapper {
-    margin: 0; 
-    padding: 15px;
-}
-
-/* Note styles */
-.note-wrap {
-    width: 100%;
-    position: relative;
-    font-size: 24px;
-    vertical-align: top;
-    display: inline-block;
-    font-family: Englebert, Arial;
-    color:#4b453c;
-    background: #F7E999;
-    line-height: 34px; 
-    text-align: center;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    &:before  {
-        display: block;
-        content: ""; 
-        background: rgba(227, 200, 114, 0.40);
-        width: 130px;
-        height: 28px;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 6px/18px 0;
-        position: absolute;
-        top: -13px;
-        left: 50%;
-        transform: translateX(-50%) rotate(-2deg);
-    }
-    
-}
-
-
-.note-blue {
-    height: 100%;
-    display: flex;
-        align-items: center;
-        justify-content: center;
-    -webkit-transform: rotate(-2deg);
-    -moz-transform: rotate(-2deg);
-    -o-transform: rotate(-2deg);
-    -ms-transform: rotate(-2deg);
-    transform: rotate(-2deg);
-}
-
-.note-blue img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 
@@ -1077,4 +1001,223 @@ ul li a {
 /* Button Styles */
 .btn {
     margin-top: 5px;
+}
+
+
+/* .collections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cover-border {
+    border-radius: 50%; 
+    border: 3px solid #88C3FB;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-image img{
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+} */
+
+
+
+
+.progress-bar{
+    background-color: #009BF9;
+}
+
+.add-footprint-card{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.add-footprint-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.add-footprint-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+.add-footprint-card:hover .add-footprint-overlay {
+    opacity: 1;
+}
+
+.add-footprint-card:hover .add-footprint-content i {
+    transform: scale(1.2); /* Adjust the scale factor for the desired growth */
+}
+/*---------------*/
+
+
+
+:root {
+--c-grey-100: #f4f6f8;
+--c-grey-200: #e3e3e3;
+--c-grey-300: #b2b2b2;
+--c-grey-400: #7b7b7b;
+--c-grey-500: #3d3d3d;
+--c-blue-500: #009BF9;
+}
+/* Some basic CSS overrides */
+
+/* End basic CSS override */
+.timeline {
+    width: 85%;
+    /* max-width: 700px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* display: flex;
+    flex-direction: column; */
+    /* padding: 32px 0 32px 32px; */
+    border-left: 2px solid #00E9EE;
+    font-size: 1.125rem;
+}
+.timeline-item {
+    display: flex;
+    gap: 24px;
+}
+.timeline-item + * {
+    margin-top: 24px;
+}
+
+.timeline-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: -52px;
+    flex-shrink: 0;
+    overflow: hidden;
+    box-shadow: 0 0 0 6px #fff;
+}
+
+.timeline-item-icon.filled-icon {
+    background-color: var(--c-blue-500);
+    color: #fff;
+}
+.timeline-item-description {
+    display: flex;
+    padding-top: 6px;
+    gap: 8px;
+    color: var(--c-grey-400);
+}
+
+.timeline-item-description a {
+    color: var(--c-grey-500);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+.footprint-list {
+    margin-top: 12px;
+    color: var(--c-grey-500);
+    border: 1px solid var(--c-grey-200);
+    box-shadow: 0 4px 4px 0 var(--c-grey-100);
+    border-radius: 6px;
+    padding: 16px;
+    font-size: 1rem;
+}
+
+
+/*----------------------- */
+.postcard-collections2 .wrapper{
+    position: relative;
+    margin-bottom: 15px;
+}
+.postcard-collections2 .wrapper i{
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background: white;
+    color: #4E8EC2;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.postcard-collections2 .wrapper i:first-child{
+    left: -23px;
+    z-index: 1;
+    display: none;
+}
+.postcard-collections2 .wrapper i:last-child{
+    right: -23px;
+}
+.postcard-collections2 .wrapper .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.postcard-collections2 .wrapper .carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.postcard-collections2 .wrapper .carousel.dragging img{
+    pointer-events: none;
+}
+
+.postcard-collections2 .wrapper .carousel img{
+    object-fit: cover;
+    width: calc(100% / 8);
+    margin-left: 14px;
+    border-radius: 15px;
+}
+
+.postcard-collections2 .wrapper .carousel img:first-child{
+    margin-left: 0px;
+}
+
+@media screen and (max-width:900px){
+    .postcard-collections2 .wrapper .carousel img{
+        width: calc(100% / 6);
+    }
+}
+
+@media screen and (max-width:550){
+    .postcard-collections2 .wrapper .carousel img{
+        width: calc(100% / 4);
+    }
+}
+
+
+
+.postcard-feed .firstCard{
+    height: 100%;
+    overflow: hidden;
+}
+.postcard-img {
+    width: 100%;
+    object-fit: cover;
 }

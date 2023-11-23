@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
     <title>Footprint | Postcard</title>
 </head>
 <body>
@@ -84,6 +87,12 @@
                     <span class="icon">
                         <i class="ri-mail-line"></i>
                         Postcards
+                    </span>
+                </a>
+                <a href="collections.html" class="">
+                    <span class="icon">
+                        <i class="ri-layout-grid-line"></i>
+                        Collections
                     </span>
                 </a>
                 <a href="diary.html" class="">
@@ -192,193 +201,240 @@
 
     <!-- Main Content -->
     <div class="content">
-        <div id="create-postcard-section" style="width: 100%;">
-            <div id="postcard-box" class="d-flex align-items-center">
-                <img src="assets/img/profile.jpg" alt="Profile Picture" width="40" height="40">
-                <div class="postcard-description flex-grow-1">
-                    <input class="form-control" type="search" placeholder="Time to add a new footprint!" aria-label="Search">
+
+        <div class="footprint-stats">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card  mb-3">
+                        <div class="card-header">
+                            <h5>Activity</h5>
+                        </div>
+                        <div class="card-body" >
+                            <div class="chat-searchbar">
+                                <i class="ri-add-circle-line musicicon"></i>
+                                <input class="form-control custom-search-bar" type="search" placeholder="Add a new footprint" aria-label="Search">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5>Bio</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>In the last 2 years you have: </p>
+                            <p>🌍 You have been to <span style="font-weight: bold;">4 </span>continents</p>
+                            <p>🗺️ You have visited <span style="font-weight: bold;">13 </span>countries</p>
+                            <p>✈️ You have got to enjoy <span style="font-weight: bold;">32 </span>cities</p>
+                        </div>
+                        
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5>Progress</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <i class="ri-price-tag-3-line"></i> Asia
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <i class="ri-price-tag-3-line"></i> Africa
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <i class="ri-price-tag-3-line"></i> America
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <i class="ri-price-tag-3-line"></i> Europe
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 85%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <i class="ri-price-tag-3-line"></i> Oceania
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <i class="ri-price-tag-3-line"></i> Antartica
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">20%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <div class="col-md-8">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5>World Map</h5>
+                        </div>
+                        <div class="card-body">
+                            <img src="assets/img/worldmap.jpg" style="width: 100%;">
+                        </div>
+                    </div>
 
-        <!-- Single Card with Footprint Charts -->
-        <div class="row mb-3">
-            <div class="col-md-12 mb-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-3 col-6">
-                                <div class="small-box" style="background-color: #F9F871;">
-                                    <div class="inner">
-                                        <h3 style="font-weight: bold;">53%</h3>
-                                        <p>World footprint</p>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5>Timeline</h5>
+                        </div>
+                        <div class="card-body">
+                            <ol class="timeline">
+                                <li class="timeline-item">
+                                    <span class="timeline-item-icon filled-icon">
+                                        <i class="ri-footprint-fill"></i>
+                                    </span>
+                                    <div class="timeline-item-wrapper">
+                                        <div class="timeline-item-description">
+                                            <span><a href="#">November 2023</a></span>
+                                        </div>
+                                        <div class="footprint-list">
+                                            <p>
+                                                <strong>El Salvador:</strong>
+                                            </p>
+                                            <ul>
+                                                <li>San Benito - 27/01/2021</li>
+                                                <li>Santa Tecla - 27/01/2021</li>
+                                                <!-- Add more cities and dates as needed -->
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="icon">
-                                        <i class="ri-earth-fill"></i>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-item-icon filled-icon">
+                                        <i class="ri-footprint-fill"></i>
+                                    </span>
+                                    <div class="timeline-item-wrapper">
+                                        <div class="timeline-item-description">
+                                            <span><a href="#">November 2023</a></span>
+                                        </div>
+                                        <div class="footprint-list">
+                                            <p>
+                                                <strong>El Salvador:</strong>
+                                            </p>
+                                            <ul>
+                                                <li>San Benito - 27/01/2021</li>
+                                                <li>Santa Tecla - 27/01/2021</li>
+                                                <!-- Add more cities and dates as needed -->
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <a href="#" class="small-box-footer">More info <i class="ri-arrow-right-line"></i></a>
-                                </div>
-                            </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
 
-                            <div class="col-lg-3 col-6">
-                                <div class="small-box" style="background-color: #ABFB95;">
-                                    <div class="inner">
-                                        <h3 style="font-weight: bold;">2</h3>
-                                        <p>Total continents</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ri-map-2-line"></i>
-                                    </div>
-                                    <a href="#" class="small-box-footer">More info <i class="ri-arrow-right-line"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-6">
-                                <div class="small-box" style="background-color: #5BF6C5;">
-                                    <div class="inner">
-                                        <h3 style="font-weight: bold;">5</h3>
-                                        <p>Total countries</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ri-plane-fill"></i>
-                                    </div>
-                                    <a href="#" class="small-box-footer">More info <i class="ri-arrow-right-line"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-6">
-                                <div class="small-box" style="background-color: #00E9EE;">
-                                    <div class="inner">
-                                        <h3 style="font-weight: bold;">18</h3>
-                                        <p>Total Cities</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ri-map-pin-line"></i>
-                                    </div>
-                                    <a href="#" class="small-box-footer">More info <i class="ri-arrow-right-line"></i></a>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Timeline</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="footprint-main">
+                                <div class="footprint-container">
+                                    <ul>
+                                        <li>
+                                            <h3 class="footprint-heading">El Salvador</h3>
+                                            <p>San Benito  - 27/01/2021</p>
+                                            <p>Santa Tecla - 27/01/2021</p>
+    
+                                            <span class="footprint-date">November 2023</span>
+                                            <span class="footprint-circle"></span>
+                                        </li>
+                                        <li>
+                                            <h3 class="footprint-heading">El Salvador</h3>
+                                            <p>27/01/2021 - San Benito</p>
+                                            <p>27/01/2021 - Santa Tecla</p>
+    
+                                            <span class="footprint-date">September 2023</span>
+                                            <span class="footprint-circle"></span>
+                                        </li>
+                                        <li>
+                                            <h3 class="footprint-heading">South Korea</h3>
+                                            <p>Ulsan - 27/01/2021</p>
+                                            <p>Cheongju - 27/01/2021</p>
+                                            <p>Seoul - 27/01/2021</p>
+                                            <p>Gangnam - 27/01/2021</p>
+                                            <p>Seoul - 27/01/2021</p>
+    
+                                            <span class="footprint-date">August 2023</span>
+                                            <span class="footprint-circle"></span>
+                                        </li>
+                                        <li>
+                                            <h3 class="footprint-heading">Japan</h3>
+                                            <p>27/01/2021 - Fukoka</p>
+    
+                                            <span class="footprint-date">August 2023</span>
+                                            <span class="footprint-circle"></span>
+                                        </li>
+                                        <li>
+                                            <h3 class="footprint-heading">South Korea</h3>
+                                            <p>Incheon - 27/01/2021</p>
+                                            <p>Seoul - 27/01/2021</p>
+                                            <p>Myeongdong - 27/01/2021</p>
+                                            <p>Seoul - 27/01/2021</p>
+                                            <p>Jeju - 27/01/2021</p>
+                                            <p>Ulsan - 27/01/2021</p>
+                                            <p>Gyeonju - 27/01/2021</p>
+                                            <p>Ulsan - 27/01/2021</p>
+                                            
+                                            <span class="footprint-date">July 2023</span>
+                                            <span class="footprint-circle"></span>
+                                        </li>
+                                        <li>
+                                            <h3 class="footprint-heading">Honduras</h3>
+                                            <p>27/01/2021 - Siguatepeque</p>
+                                            <p>27/01/2021 - Comayagua</p>
+                                            <p>27/01/2021 - Tegucigalpa</p>
+                                            <p>27/01/2021 - Santa Lucía</p>
+                                            <p>27/01/2021 - Valle de Ángeles</p>
+                                            <p>27/01/2021 - Cantarranas</p>
+                                            <p>27/01/2021 - Tela</p>
+                                            <p>27/01/2021 - Yoro</p>
+                                            <p>27/01/2021 - San Pedro Sula</p>
+                                            
+                                            <span class="footprint-date">October 2022</span>
+                                            <span class="footprint-circle"></span>
+                                        </li>
+                                        <li>
+                                            <h3 class="footprint-heading">Honduras</h3>
+                                            <p>San Pedro Sula - 27/01/2021</p>
+                                            <p>Los Naranjos - 27/01/2021</p>
+                                            <p>La Lima - 27/01/2021</p>
+                                            
+                                            <span class="footprint-date">September 2022</span>
+                                            <span class="footprint-circle"></span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-
-        <!-- Single Card with World Map SVG -->
-        <div class="row mb-3">
-            <div class="col-md-12 mb-12">
-                <!-- Bootstrap Card -->
-                <div class="card">
-                    <div class="card-header" style="text-align: center;">
-                        <h5>World Map</h5>
-                    </div>
-                    <div class="card-body">
-                        <img src="assets/img/worldmap.jpg" style="width: 100%;">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-12 mb-12">
-                <!-- Bootstrap Card -->
-                <div class="card" style="padding: 0;margin: 0;box-sizing: border-box;">
-                    <div class="card-header" style="text-align: center;">
-                        <h5>Footprint Timeline</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="footprint-main">
-                            <div class="footprint-container">
-                                <ul>
-                                    <li>
-                                        <h3 class="footprint-heading">El Salvador</h3>
-                                        <p>San Benito  - 27/01/2021</p>
-                                        <p>Santa Tecla - 27/01/2021</p>
-
-                                        <span class="footprint-date">November 2023</span>
-                                        <span class="footprint-circle"></span>
-                                    </li>
-                                    <li>
-                                        <h3 class="footprint-heading">El Salvador</h3>
-                                        <p>27/01/2021 - San Benito</p>
-                                        <p>27/01/2021 - Santa Tecla</p>
-
-                                        <span class="footprint-date">September 2023</span>
-                                        <span class="footprint-circle"></span>
-                                    </li>
-                                    <li>
-                                        <h3 class="footprint-heading">South Korea</h3>
-                                        <p>Ulsan - 27/01/2021</p>
-                                        <p>Cheongju - 27/01/2021</p>
-                                        <p>Seoul - 27/01/2021</p>
-                                        <p>Gangnam - 27/01/2021</p>
-                                        <p>Seoul - 27/01/2021</p>
-
-                                        <span class="footprint-date">August 2023</span>
-                                        <span class="footprint-circle"></span>
-                                    </li>
-                                    <li>
-                                        <h3 class="footprint-heading">Japan</h3>
-                                        <p>27/01/2021 - Fukoka</p>
-
-                                        <span class="footprint-date">August 2023</span>
-                                        <span class="footprint-circle"></span>
-                                    </li>
-                                    <li>
-                                        <h3 class="footprint-heading">South Korea</h3>
-                                        <p>Incheon - 27/01/2021</p>
-                                        <p>Seoul - 27/01/2021</p>
-                                        <p>Myeongdong - 27/01/2021</p>
-                                        <p>Seoul - 27/01/2021</p>
-                                        <p>Jeju - 27/01/2021</p>
-                                        <p>Ulsan - 27/01/2021</p>
-                                        <p>Gyeonju - 27/01/2021</p>
-                                        <p>Ulsan - 27/01/2021</p>
-                                        
-                                        <span class="footprint-date">July 2023</span>
-                                        <span class="footprint-circle"></span>
-                                    </li>
-                                    <li>
-                                        <h3 class="footprint-heading">Honduras</h3>
-                                        <p>27/01/2021 - Siguatepeque</p>
-                                        <p>27/01/2021 - Comayagua</p>
-                                        <p>27/01/2021 - Tegucigalpa</p>
-                                        <p>27/01/2021 - Santa Lucía</p>
-                                        <p>27/01/2021 - Valle de Ángeles</p>
-                                        <p>27/01/2021 - Cantarranas</p>
-                                        <p>27/01/2021 - Tela</p>
-                                        <p>27/01/2021 - Yoro</p>
-                                        <p>27/01/2021 - San Pedro Sula</p>
-                                        
-                                        <span class="footprint-date">October 2022</span>
-                                        <span class="footprint-circle"></span>
-                                    </li>
-                                    <li>
-                                        <h3 class="footprint-heading">Honduras</h3>
-                                        <p>San Pedro Sula - 27/01/2021</p>
-                                        <p>Los Naranjos - 27/01/2021</p>
-                                        <p>La Lima - 27/01/2021</p>
-                                        
-                                        <span class="footprint-date">September 2022</span>
-                                        <span class="footprint-circle"></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
 
 
 </div>
 
-
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/scripts.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 
 </body>
 </html>
+
+

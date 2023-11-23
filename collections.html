@@ -68,7 +68,7 @@
     <div class="sidebar-left">
         <div class="container">
             <div class="menu">
-                <a href="explore.html" class="active">
+                <a href="explore.html" class="">
                     <span class="icon">
                         <i class="ri-earth-line"></i>
                         Explore
@@ -86,7 +86,7 @@
                         Postcards
                     </span>
                 </a>
-                <a href="collections.html" class="">
+                <a href="collections.html" class="active">
                     <span class="icon">
                         <i class="ri-layout-grid-line"></i>
                         Collections
@@ -202,15 +202,122 @@
             <div id="postcard-box" class="d-flex align-items-center">
                 <img src="assets/img/profile.jpg" alt="Profile Picture" width="40" height="40">
                 <div class="postcard-description flex-grow-1">
-                    <input class="form-control" type="search" placeholder="Search postcards and explore the world!" aria-label="Search">
+                    <input class="form-control" type="search" placeholder="Share a postcard or create a collection!" aria-label="Search">
                 </div>
             </div>
         </div>
 
+        <div class="postcard-collections2"> 
+            <div class="wrapper">
+                <i id="leftIconPostcardCollection" class="ri-arrow-left-line"></i>
+                <div class="carousel">
+                    <img src="assets/img/collection-cover0.png" alt="" title="Add a collection" draggable="false">
+                    <img src="assets/img/collection-cover1.jpg" alt="" title="HONDURAS" draggable="false">
+                    <img src="assets/img/collection-cover2.png" alt="" title="KOREA" draggable="false">
+                    <img src="assets/img/collection-cover3.jpg" alt="" title="JAPAN" draggable="false">
+                    <img src="assets/img/collection-cover4.jpg" alt="" title="SWISS" draggable="false">
+                    <img src="assets/img/collection-cover5.jpg" alt="" title="COLOMBIA" draggable="false">
+                    <img src="assets/img/collection-cover1.jpg" alt="" title="HONDURAS" draggable="false">
+                    <img src="assets/img/collection-cover2.png" alt="" title="KOREA" draggable="false">
+                    <img src="assets/img/collection-cover3.jpg" alt="" title="JAPAN" draggable="false">
+                    <img src="assets/img/collection-cover4.jpg" alt="" title="SWISS" draggable="false">
+                    <img src="assets/img/collection-cover5.jpg" alt="" title="COLOMBIA" draggable="false">
+                    <img src="assets/img/collection-cover1.jpg" alt="" title="HONDURAS" draggable="false">
+                    <img src="assets/img/collection-cover2.png" alt="" title="KOREA" draggable="false">
+                    <img src="assets/img/collection-cover3.jpg" alt="" title="JAPAN" draggable="false">
+                    <img src="assets/img/collection-cover4.jpg" alt="" title="SWISS" draggable="false">
+                    <img src="assets/img/collection-cover5.jpg" alt="" title="COLOMBIA" draggable="false">
+                </div>
+                <i id="rightIconPostcardCollection" class="ri-arrow-right-line"></i>
+            </div>
+        </div>
+
+        <div class="postcard-collections">
+            <!-- <div class="row">
+                <div class="col-md-2">
+                    <div class="collections">
+                        <div class="cover-border">
+                            <div class="cover-image">
+                                <img src="assets/img/collection-cover1.jpg" alt="Cover Image">
+                            </div>
+                        </div>
+                        <div class="cover-title">
+                            <p>Honduras 🇭🇳</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="collections">
+                        <div class="cover-border">
+                            <div class="cover-image">
+                                <img src="assets/img/collection-cover2.png" alt="Cover Image">
+                            </div>
+                        </div>
+                        <div class="cover-title">
+                            <p>Korea 🇰🇷</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="collections">
+                        <div class="cover-border">
+                            <div class="cover-image">
+                                <img src="assets/img/collection-cover3.jpg" alt="Cover Image">
+                            </div>
+                        </div>
+                        <div class="cover-title">
+                            <p>Japan 🇯🇵</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="collections">
+                        <div class="cover-border">
+                            <div class="cover-image">
+                                <img src="assets/img/collection-cover4.jpg" alt="Cover Image">
+                            </div>
+                        </div>
+                        <div class="cover-title">
+                            <p>Switzerland 🇨🇭</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="collections">
+                        <div class="cover-border">
+                            <div class="cover-image">
+                                <img src="assets/img/collection-cover5.jpg" alt="Cover Image">
+                            </div>
+                        </div>
+                        <div class="cover-title">
+                            <p>Colombia 🇨🇴</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+
         <!-- Postcard Feed -->
         <div class="row postcard-feed">
             <!-- Postcard 1 -->
-            <div class="col-md-6 mb-3">
+            <div class="col-md-3 mb-3">
+                <!-- Bootstrap Card -->
+                <div class="card firstCard" >
+                    <!-- Card Body -->
+                    <div class="card-body p-0">
+                        <img src="assets/img/postcard-front0.png" alt="Postcard Image" class="postcard-img">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Postcard 1 -->
+            <div class="col-md-3 mb-3">
                 <!-- Bootstrap Card -->
                 <div class="card">
                     <!-- Card Header -->
@@ -239,7 +346,7 @@
                         <div class="postcard" id="postcard1">
                             <div class="front">
                                 <!-- Front of the postcard content goes here -->
-                                <img src="assets/img/front-image1.png" alt="Postcard Front" style="width: 100%;">
+                                <img src="assets/img/front-image2.png" alt="Postcard Front" style="width: 100%;">
                             </div>
                             <div class="back">
                                 <!-- Back of the postcard content goes here -->
@@ -262,7 +369,59 @@
             </div>
 
             <!-- Postcard 1 -->
-            <div class="col-md-6 mb-3">
+            <div class="col-md-3 mb-3">
+                <!-- Bootstrap Card -->
+                <div class="card">
+                    <!-- Card Header -->
+                    <div class="card-header">
+                        <!-- Profile Information -->
+                        <div class="d-flex align-items-center">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <div class="ms-2">
+                                <span>@nickramen</span>
+                                <div class="text-muted small">
+                                    <!-- Location -->
+                                    <i class="ri-map-pin-line"></i> Honduras
+                                </div>
+                            </div>
+                            <div class="ms-auto">
+                                <!-- Date -->
+                                <div class="text-muted small">
+                                    5 days ago
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body p-0">
+                        <!-- Postcard -->
+                        <div class="postcard" id="postcard1">
+                            <div class="front">
+                                <!-- Front of the postcard content goes here -->
+                                <img src="assets/img/front-image2.png" alt="Postcard Front" style="width: 100%;">
+                            </div>
+                            <div class="back">
+                                <!-- Back of the postcard content goes here -->
+                                <img src="assets/img/back-image.jpg" alt="Postcard Back" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Footer -->
+                    <div class="card-footer">
+                        <!-- Social Interactions -->
+                        <div class="d-flex justify-content-between">
+                            <div><i class="ri-heart-line"></i> 365</div>
+                            <div><i class="ri-discuss-line"></i> 17</div>
+                            <div><i class="ri-bookmark-line"></i> 92</div>
+                            <div><i class="ri-printer-line"></i> 12</div>
+                            <div><i class="ri-share-forward-line"></i> 5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Postcard 1 -->
+            <div class="col-md-3 mb-3">
                 <!-- Bootstrap Card -->
                 <div class="card">
                     <!-- Card Header -->
@@ -317,59 +476,7 @@
         <!-- Postcard Feed -->
         <div class="row postcard-feed">
             <!-- Postcard 1 -->
-            <div class="col-md-6 mb-3">
-                <!-- Bootstrap Card -->
-                <div class="card">
-                    <!-- Card Header -->
-                    <div class="card-header">
-                        <!-- Profile Information -->
-                        <div class="d-flex align-items-center">
-                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
-                            <div class="ms-2">
-                                <span>@nickramen</span>
-                                <div class="text-muted small">
-                                    <!-- Location -->
-                                    <i class="ri-map-pin-line"></i> Honduras
-                                </div>
-                            </div>
-                            <div class="ms-auto">
-                                <!-- Date -->
-                                <div class="text-muted small">
-                                    5 days ago
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Body -->
-                    <div class="card-body p-0">
-                        <!-- Postcard -->
-                        <div class="postcard" id="postcard1">
-                            <div class="front">
-                                <!-- Front of the postcard content goes here -->
-                                <img src="assets/img/front-image3.png" alt="Postcard Front" style="width: 100%;">
-                            </div>
-                            <div class="back">
-                                <!-- Back of the postcard content goes here -->
-                                <img src="assets/img/back-image.jpg" alt="Postcard Back" style="width: 100%;">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Footer -->
-                    <div class="card-footer">
-                        <!-- Social Interactions -->
-                        <div class="d-flex justify-content-between">
-                            <div><i class="ri-heart-line"></i> 365</div>
-                            <div><i class="ri-discuss-line"></i> 17</div>
-                            <div><i class="ri-bookmark-line"></i> 92</div>
-                            <div><i class="ri-printer-line"></i> 12</div>
-                            <div><i class="ri-share-forward-line"></i> 5</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Postcard 1 -->
-            <div class="col-md-6 mb-3">
+            <div class="col-md-3 mb-3">
                 <!-- Bootstrap Card -->
                 <div class="card">
                     <!-- Card Header -->
@@ -419,13 +526,9 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        
-        <!-- Postcard Feed -->
-        <div class="row postcard-feed">
             <!-- Postcard 1 -->
-            <div class="col-md-6 mb-3">
+            <div class="col-md-3 mb-3">
                 <!-- Bootstrap Card -->
                 <div class="card">
                     <!-- Card Header -->
@@ -477,7 +580,7 @@
             </div>
 
             <!-- Postcard 1 -->
-            <div class="col-md-6 mb-3">
+            <div class="col-md-3 mb-3">
                 <!-- Bootstrap Card -->
                 <div class="card">
                     <!-- Card Header -->
@@ -506,7 +609,59 @@
                         <div class="postcard" id="postcard1">
                             <div class="front">
                                 <!-- Front of the postcard content goes here -->
-                                <img src="assets/img/front-image3.png" alt="Postcard Front" style="width: 100%;">
+                                <img src="assets/img/front-image2.png" alt="Postcard Front" style="width: 100%;">
+                            </div>
+                            <div class="back">
+                                <!-- Back of the postcard content goes here -->
+                                <img src="assets/img/back-image.jpg" alt="Postcard Back" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Footer -->
+                    <div class="card-footer">
+                        <!-- Social Interactions -->
+                        <div class="d-flex justify-content-between">
+                            <div><i class="ri-heart-line"></i> 365</div>
+                            <div><i class="ri-discuss-line"></i> 17</div>
+                            <div><i class="ri-bookmark-line"></i> 92</div>
+                            <div><i class="ri-printer-line"></i> 12</div>
+                            <div><i class="ri-share-forward-line"></i> 5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Postcard 1 -->
+            <div class="col-md-3 mb-3">
+                <!-- Bootstrap Card -->
+                <div class="card">
+                    <!-- Card Header -->
+                    <div class="card-header">
+                        <!-- Profile Information -->
+                        <div class="d-flex align-items-center">
+                            <img src="assets/img/profile.jpg" class="rounded-circle" width="40" height="40" alt="Profile Picture">
+                            <div class="ms-2">
+                                <span>@nickramen</span>
+                                <div class="text-muted small">
+                                    <!-- Location -->
+                                    <i class="ri-map-pin-line"></i> Honduras
+                                </div>
+                            </div>
+                            <div class="ms-auto">
+                                <!-- Date -->
+                                <div class="text-muted small">
+                                    5 days ago
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body p-0">
+                        <!-- Postcard -->
+                        <div class="postcard" id="postcard1">
+                            <div class="front">
+                                <!-- Front of the postcard content goes here -->
+                                <img src="assets/img/front-image2.png" alt="Postcard Front" style="width: 100%;">
                             </div>
                             <div class="back">
                                 <!-- Back of the postcard content goes here -->
@@ -529,13 +684,11 @@
             </div>
         </div>
 
-
-        
     </div>
-
-
 </div>
 
+
+<script src="assets/js/scripts.js"></script>
 
 </body>
 </html>
