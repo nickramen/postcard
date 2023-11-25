@@ -4,437 +4,472 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Postcard 2.0</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
-    <title>Footprint | Postcard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <script src="assets/js/scripts.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <div class="row w-100">
-                <!-- Left Section -->
-                <div class="col-4">
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                        
+
+<nav class="navbar">
+    <div class="navbar-left">
+        <a href="explore.html" class="logo"><img src="assets/img/logo.png"></a>
+
+        <div class="search-box">
+            <img src="assets/img/search.png">
+            <input type="text" placeholder="Search">
+        </div>
+
+    </div>
+    <div class="navbar-right">
+        <i class="ri-menu-line" onclick="toggleMenuOptions() "title="Menu"></i>
+        <div class="online">
+            <img src="assets/img/profile.jpg" class="nav-profile-img" onclick="toggleMenuProfile()">
+        </div>
+    </div>
+    <!-- --------------- profile-drop-down-menu---------- -->
+    <div class="profile-menu-wrap" id="profileMenu">
+        <div class="profile-menu">
+            <div class="user-info">
+                <img src="assets/img/profile.jpg">
+                <div>
+                    <h3>@nickramen</h3>
+                    <a href="profile.html">See your profile</a>
+                </div>
+            </div>
+            <hr>
+            <a href="#" class="profile-menu-link">
+                <img src="assets/img/feedback.png">
+                <p>Give Feedback</p>
+                <span>></span>
+            </a>
+            <a href="#" class="profile-menu-link">
+                <img src="assets/img/setting.png">
+                <p>Settings & Privacy</p>
+                <span>></span>
+            </a>
+            <a href="#" class="profile-menu-link">
+                <img src="assets/img/help.png">
+                <p>Help & Support</p>
+                <span>></span>
+            </a>
+            <a href="#" class="profile-menu-link">
+                <img src="assets/img/display.png">
+                <p>Display & Accessiblity</p>
+                <span>></span>
+            </a>
+            <a href="#" class="profile-menu-link">
+                <img src="assets/img/logout.png">
+                <p>Logout</p>
+                <span>></span>
+            </a>
+        </div>
+    </div>
+    <!-- --------------- options-drop-down-menu---------- -->
+    <div class="options-menu-wrap" id="optionsMenu">
+        <div class="options-menu">
+            <div class="user-info">
+                <h3>Menu</h3>
+            </div>
+            <hr>
+            <a href="explore.html" class="options-menu-link">
+                <span class="icon">
+                    <i class="ri-earth-line"></i>
+                    Explore
+                </span>
+            </a>
+            <a href="footprint.html" class="options-menu-link active">
+                <span class="icon">
+                    <i class="ri-footprint-line"></i>
+                    Footprint
+                </span>
+            </a>
+            <a href="postcards.html" class="options-menu-link">
+                <span class="icon">
+                    <i class="ri-image-2-line"></i>
+                    Postcards
+                </span>
+            </a>
+            <a href="journal.html" class="options-menu-link">
+                <span class="icon">
+                    <i class="ri-article-line"></i>
+                    Journal
+                </span>
+            </a>
+            <a href="friends.html" class="options-menu-link">
+                <span class="icon">
+                    <i class="ri-group-2-line"></i>
+                    Friends
+                </span>
+            </a>
+        </div>
+    </div>
+
+</nav>
+
+<!-- -------------- navbar close-------- -->
+
+<div class="container">
+<!-- -------left-sidebar------------ -->
+    <div class="left-sidebar">
+        <div class="sidebar-profile-box">
+            <img src="assets/img/profile-background.jpeg" class="profile-background" width="100%">
+            <div class="sidebar-profile-info">
+                <img src="assets/img/profile.jpg">
+                <h1>@nickramen</h1>
+                <h3>I love mangoes and computers</h3>
+                <br>
+                <h3>Joined 3 days ago</h3>
+                <div class="row" style="width:100%; display: flex; justify-content: space-between;">
+                    <div class="column-1" style="width: 45%;">
+                        <ul>
+                            <li><i class="ri-user-line"></i> Followers<span>52</span></li>
+                            <li><i class="ri-image-2-line"></i> Postcards<span>23</span></li>
+                            <li><i class="ri-map-pin-line"></i> Countries<span>9</span></li>
+                        </ul>
+                    </div>
+                    <div class="column-2" style="width: 45%;">
+                        <ul>
+                            <li><i class="ri-user-follow-line"></i> Following<span>810</span></li>
+                            <li><i class="ri-article-line"></i> Journal<span>12</span></li>
+                            <li><i class="ri-heart-line"></i> Likes<span>205</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-profile-link">
+                <a href="#"><img src="assets/img/postcard.jpg">Postcards</a>
+                <a href="#"><img src="assets/img/footprint.png"> Footprint</a>
+            </div>
+        </div>
+
+        <div class="sidebar-news">
+            <img src="assets/img/more.png" class="info-icon">
+            <h3>Trending Postcards</h3>
+            
+            <div class="trending-postcards">
+                <div class="trending-postcards-item">
+                    <a href="" class="card-body">
+                        <img src="assets/img/front-image4.png" alt="">
                     </a>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Center Section with Search Bar -->
-                <div class="col-4 d-flex justify-content-center align-items-center">
-                    <div class="searchbar">
-                        <i class="ri-search-line musicicon"></i>
-                        <input class="form-control custom-search-bar" type="search" placeholder="Search on Postcard" aria-label="Search">
-                    </div>
+                <div class="trending-postcards-item">
+                    <a href="" class="card-body">
+                        <img src="assets/img/front-image5.png" alt="">
+                    </a>
                 </div>
-
-                <!-- Right Section -->
-                <div class="col-4 d-flex justify-content-end align-items-center">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-envelope"></i>
-                                Shop
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-envelope"></i>
-                                Notifications
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-person"></i>
-                                Settings
-                            </a>
-                        </li>
-                        <!-- Profile Picture -->
-                        <li class="nav-item">
-                            <img src="assets/img/profile.jpg" alt="Profile Picture" class="profile-picture">
-                        </li>
-                    </ul>
+                <div class="trending-postcards-item">
+                    <a href="" class="card-body">
+                        <img src="assets/img/front-image6.png" alt="">
+                    </a>
+                </div>
+                <div class="trending-postcards-item">
+                    <a href="" class="card-body">
+                        <img src="assets/img/front-image4.png" alt="">
+                    </a>
                 </div>
             </div>
-        </div>
-    </nav>
 
-
-    <div class="sidebar-left">
-        <div class="container">
-            <div class="menu">
-                <a href="explore.html" class="">
-                    <span class="icon">
-                        <i class="ri-earth-line"></i>
-                        Explore
-                    </span>
-                </a>
-                <a href="footprint.html" class="active">
-                    <span class="icon">
-                        <i class="ri-footprint-line"></i>
-                        Footprint
-                    </span>
-                </a>
-                <a href="postcards.html" class="">
-                    <span class="icon">
-                        <i class="ri-mail-line"></i>
-                        Postcards
-                    </span>
-                </a>
-                <a href="collections.html" class="">
-                    <span class="icon">
-                        <i class="ri-layout-grid-line"></i>
-                        Collections
-                    </span>
-                </a>
-                <a href="diary.html" class="">
-                    <span class="icon">
-                        <i class="ri-article-line"></i>
-                        Diary
-                    </span>
-                </a>
-                <a href="friends.html" class="">
-                    <span class="icon">
-                        <i class="ri-group-2-line"></i>
-                        Friends
-                    </span>
-                </a>
-                <a href="chats.html" class="">
-                    <span class="icon">
-                        <i class="ri-chat-1-line"></i>
-                        Chats
-                    </span>
-                </a>
-                <a href="chats.html" class="">
-                    <span class="icon">
-                        <i class="ri-bookmark-line"></i>
-                        Saved
-                    </span>
-                </a>
-            </div>
-            <!-- Footer in the Sidebar -->
-            <div class="sidebar-footer">
-                <p>Postcard © 2023 - by @nickramen</p>
-            </div>
+            <a href="#" class="read-more-link">See more</a>
         </div>
+
     </div>
-
-
-    <!-- Right Sidebar -->
-    <div class="sidebar-right">
-        <div class="profile-statistics">
-            <h5>Profile</h5>
-            <div class="statistic-row">
-                <div class="statistic-item">
-                    <div class="statistic-number">3,465</div>
-                    <div class="statistic-description"><i class="ri-user-line"></i> Followers</div>
-                </div>
-                <div class="statistic-item">
-                    <div class="statistic-number">1,987</div>
-                    <div class="statistic-description"><i class="ri-user-follow-line"></i> Following</div>
-                </div>
+<!-- -----------------main-content------------ -->
+    <div class="main-content">
+        <div class="create-post">
+            <div class="create-post-input">
+                <img src="assets/img/profile.jpg">
+                <p>It's time to update your footprint!</p>
             </div>
-            <div class="statistic-row">
-                <div class="statistic-item">
-                    <div class="statistic-number">68</div>
-                    <div class="statistic-description"><i class="ri-send-plane-line"></i> Posts shared</div>
-                </div>
-                <div class="statistic-item">
-                    <div class="statistic-number">24</div>
-                    <div class="statistic-description"><i class="ri-bookmark-line"></i> Posts saved</div>
-                </div>
+            <div class="create-post-links" style="display: block;">
+                <li style="width: 100%; border-right: none;"><i class="ri-footprint-line"></i> Postcard</li>
             </div>
-            <div class="statistic-row">
-                <div class="statistic-item">
-                    <div class="statistic-number">382 <span class="small text-muted">days ago</span></div>
-                    <div class="statistic-description"><i class="ri-timer-2-line"></i> Member since</div>
-                </div>
-                <div class="statistic-item">
-                    <div class="statistic-number">9</div>
-                    <div class="statistic-description"><i class="ri-pushpin-line"></i> Countries</div>
-                </div>
-            </div>
-            <hr>
-
-            <!-- Statistics for postcards -->
-            <h5>Postcards</h5>
-            <div class="statistic-row">
-                <div class="statistic-item">
-                    <div class="statistic-number">500</div>
-                    <div class="statistic-description"><i class="ri-printer-line"></i> Prints</div>
-                </div>
-                <div class="statistic-item">
-                    <div class="statistic-number">200</div>
-                    <div class="statistic-description"><i class="ri-share-line"></i> Shares</div>
-                </div>
-                <div class="statistic-item">
-                    <div class="statistic-number">1,000</div>
-                    <div class="statistic-description"><i class="ri-heart-line"></i> Likes</div>
-                </div>
-                <!-- Add more statistics for postcards as needed -->
-            </div>
-            <hr>
-
-            <!-- Statistics for credits -->
-            <h5>Credits</h5>
-            <div class="statistic-row">
-                <div class="statistic-item">
-                    <div class="statistic-number">500</div>
-                    <div class="statistic-description"><i class="ri-coin-line"></i> Coins</div>
-                </div>
-                <div class="statistic-item">
-                    <div class="statistic-number">35</div>
-                    <div class="statistic-description"><i class="ri-vip-diamond-line"></i> Diamonds</div>
-                </div>
-            </div>
-            <hr>
         </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="content">
+        <div class="sort-by">
+            <hr>
+            <p><span>World footprint <img src="assets/img/down-arrow.png"></span></p>
+        </div>
 
-        <div class="footprint-stats">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card  mb-3">
+        <div class="footprint-map">
+            <div class="card">
+                <div class="card-header">
+                    <h5>World Map</h5>
+                </div>
+                <div class="card-body">
+                    <img src="assets/img/worldmap.jpg" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-by">
+            <hr>
+            <p><span>Activity <img src="assets/img/down-arrow.png"></span></p>
+        </div>
+
+        <div class="footprint-sections">
+            <div class="footprint-section-item">
+                <div class="footprint-progress">
+                    <div class="card">
                         <div class="card-header">
-                            <h5>Activity</h5>
-                        </div>
-                        <div class="card-body" >
-                            <div class="chat-searchbar">
-                                <i class="ri-add-circle-line musicicon"></i>
-                                <input class="form-control custom-search-bar" type="search" placeholder="Add a new footprint" aria-label="Search">
+                                <h5>Summary</h5>
                             </div>
-                        </div>
+                            <div class="card-body" style="text-align: justify;">
+                                <p>In the last 2 years you have been to
+                                <span style="color: #009BF9; font-weight: bold;">4 </span>continents, 
+                                <span style="color: #009BF9; font-weight: bold;">13 </span>countries, and
+                                <span style="color: #009BF9; font-weight: bold;">32 </span>cities.</p>
+                                <br>
+                                <p>You have also registered 
+                                <span style="color: #009BF9; font-weight: bold;">13 </span> footprints in your timeline.</p>
+                                <br>
+                                <p>In total, you have left your footprint on <span style="color: #009BF9; font-weight: bold;">8% </span> of the countries worldwide.</p>
+                            </div>
                     </div>
-                    
-                    <div class="card mb-3">
+                    <div class="card">
                         <div class="card-header">
-                            <h5>Bio</h5>
-                        </div>
-                        <div class="card-body">
-                            <p>In the last 2 years you have: </p>
-                            <p>🌍 You have been to <span style="font-weight: bold;">4 </span>continents</p>
-                            <p>🗺️ You have visited <span style="font-weight: bold;">13 </span>countries</p>
-                            <p>✈️ You have got to enjoy <span style="font-weight: bold;">32 </span>cities</p>
-                        </div>
-                        
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            <h5>Progress</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12 mb-3">
-                                    <i class="ri-price-tag-3-line"></i> Asia
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+                                <h5>Progress</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="progress-continents">
+                                    <div class="progress-continent-item">
+                                        <i class="ri-price-tag-3-line"></i> Asia
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12 mb-3">
-                                    <i class="ri-price-tag-3-line"></i> Africa
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                                    <div class="progress-continent-item">
+                                        <i class="ri-price-tag-3-line"></i> Africa
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12 mb-3">
-                                    <i class="ri-price-tag-3-line"></i> America
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                                    <div class="progress-continent-item">
+                                        <i class="ri-price-tag-3-line"></i> America
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12 mb-3">
-                                    <i class="ri-price-tag-3-line"></i> Europe
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 85%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                    <div class="progress-continent-item">
+                                        <i class="ri-price-tag-3-line"></i> Europe
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 85%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12 mb-3">
-                                    <i class="ri-price-tag-3-line"></i> Oceania
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                    <div class="progress-continent-item">
+                                        <i class="ri-price-tag-3-line"></i> Oceania
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12 mb-3">
-                                    <i class="ri-price-tag-3-line"></i> Antartica
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">20%</div>
+                                    <div class="progress-continent-item">
+                                        <i class="ri-price-tag-3-line"></i> Antartica
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">20%</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            <h5>World Map</h5>
-                        </div>
-                        <div class="card-body">
-                            <img src="assets/img/worldmap.jpg" style="width: 100%;">
-                        </div>
-                    </div>
-
-                    <div class="card mb-3">
+            </div>
+            <div class="footprint-section-item">
+                <div class="footprint-timeline">
+                    <div class="card">
                         <div class="card-header">
                             <h5>Timeline</h5>
                         </div>
                         <div class="card-body">
                             <ol class="timeline">
-                                <li class="timeline-item">
-                                    <span class="timeline-item-icon filled-icon">
+                                <li class="timeline-item | extra-space">
+                                    <span class="timeline-item-icon | filled-icon">
                                         <i class="ri-footprint-fill"></i>
                                     </span>
                                     <div class="timeline-item-wrapper">
                                         <div class="timeline-item-description">
-                                            <span><a href="#">November 2023</a></span>
+                                            <span><a href="#">November 2023 -</a> footprint left at El Salvador</span>
                                         </div>
                                         <div class="footprint-list">
-                                            <p>
-                                                <strong>El Salvador:</strong>
-                                            </p>
-                                            <ul>
-                                                <li>San Benito - 27/01/2021</li>
-                                                <li>Santa Tecla - 27/01/2021</li>
-                                                <!-- Add more cities and dates as needed -->
-                                            </ul>
+                                            <p><i class="ri-pushpin-line"></i> San Benito <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Santa Tecla <span><i class="ri-history-line"></i> 27/01/2021</span></p>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="timeline-item">
-                                    <span class="timeline-item-icon filled-icon">
+                                    <span class="timeline-item-icon | filled-icon">
                                         <i class="ri-footprint-fill"></i>
                                     </span>
                                     <div class="timeline-item-wrapper">
                                         <div class="timeline-item-description">
-                                            <span><a href="#">November 2023</a></span>
+                                            <span><a href="#">September 2023 -</a> footprint left at El Salvador</span>
                                         </div>
                                         <div class="footprint-list">
-                                            <p>
-                                                <strong>El Salvador:</strong>
-                                            </p>
-                                            <ul>
-                                                <li>San Benito - 27/01/2021</li>
-                                                <li>Santa Tecla - 27/01/2021</li>
-                                                <!-- Add more cities and dates as needed -->
-                                            </ul>
+                                            <p><i class="ri-pushpin-line"></i> San Benito <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Santa Tecla <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-item-icon | faded-icon">
+                                        <i class="ri-footprint-fill"></i>
+                                    </span>
+                                    <div class="timeline-item-wrapper">
+                                        <div class="timeline-item-description">
+                                            <span><a href="#">August 2023 -</a> footprint left at South Korea</span>
+                                        </div>
+                                        <div class="footprint-list">
+                                            <p><i class="ri-pushpin-line"></i> Ulsan <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Cheongju <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Seoul <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Gangnam <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Seoul <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item | extra-space">
+                                    <span class="timeline-item-icon | filled-icon">
+                                        <i class="ri-footprint-fill"></i>
+                                    </span>
+                                    <div class="timeline-item-wrapper">
+                                        <div class="timeline-item-description">
+                                            <span><a href="#">August 2023 -</a> footprint left at Japan</span>
+                                        </div>
+                                        <div class="footprint-list">
+                                            <p><i class="ri-pushpin-line"></i> Fukoka <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-item-icon | filled-icon">
+                                        <i class="ri-footprint-fill"></i>
+                                    </span>
+                                    <div class="timeline-item-wrapper">
+                                        <div class="timeline-item-description">
+                                            <span><a href="#">July 2023 -</a> footprint left at South Korea</span>
+                                        </div>
+                                        <div class="footprint-list">
+                                            <p><i class="ri-pushpin-line"></i> Incheon <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Seoul <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Myeondong <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Seoul <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Jeju <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Ulsan <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Gyeongju <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Ulsan <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item | extra-space">
+                                    <span class="timeline-item-icon | filled-icon">
+                                        <i class="ri-footprint-fill"></i>
+                                    </span>
+                                    <div class="timeline-item-wrapper">
+                                        <div class="timeline-item-description">
+                                            <span><a href="#">October 2022 -</a> footprint left at Honduras</span>
+                                        </div>
+                                        <div class="footprint-list">
+                                            <p><i class="ri-pushpin-line"></i> Siguatepeque <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Comayagua <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Tegucigalpa <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Santa Lucia <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Valle de Angeles <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Cantarranas <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Tela <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Yoro <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> San Pedro Sula <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item | extra-space">
+                                    <span class="timeline-item-icon | faded-icon">
+                                        <i class="ri-footprint-fill"></i>
+                                    </span>
+                                    <div class="timeline-item-wrapper">
+                                        <div class="timeline-item-description">
+                                            <span><a href="#">September 2022 -</a> footprint left at Honduras</span>
+                                        </div>
+                                        <div class="footprint-list">
+                                            <p><i class="ri-pushpin-line"></i> San Pedro Sula <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Los Naranjos <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> La Lima <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item | extra-space">
+                                    <span class="timeline-item-icon | filled-icon">
+                                        <i class="ri-footprint-fill"></i>
+                                    </span>
+                                    <div class="timeline-item-wrapper">
+                                        <div class="timeline-item-description">
+                                            <span><a href="#">September 2022 -</a> footprint left at Belice</span>
+                                        </div>
+                                        <div class="footprint-list">
+                                            <p><i class="ri-pushpin-line"></i> San Pedro Sula <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> Los Naranjos <span><i class="ri-history-line"></i> 27/01/2021</span></p>
+                                            <p><i class="ri-pushpin-line"></i> La Lima <span><i class="ri-history-line"></i> 27/01/2021</span></p>
                                         </div>
                                     </div>
                                 </li>
                             </ol>
                         </div>
                     </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <h5>Timeline</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="footprint-main">
-                                <div class="footprint-container">
-                                    <ul>
-                                        <li>
-                                            <h3 class="footprint-heading">El Salvador</h3>
-                                            <p>San Benito  - 27/01/2021</p>
-                                            <p>Santa Tecla - 27/01/2021</p>
-    
-                                            <span class="footprint-date">November 2023</span>
-                                            <span class="footprint-circle"></span>
-                                        </li>
-                                        <li>
-                                            <h3 class="footprint-heading">El Salvador</h3>
-                                            <p>27/01/2021 - San Benito</p>
-                                            <p>27/01/2021 - Santa Tecla</p>
-    
-                                            <span class="footprint-date">September 2023</span>
-                                            <span class="footprint-circle"></span>
-                                        </li>
-                                        <li>
-                                            <h3 class="footprint-heading">South Korea</h3>
-                                            <p>Ulsan - 27/01/2021</p>
-                                            <p>Cheongju - 27/01/2021</p>
-                                            <p>Seoul - 27/01/2021</p>
-                                            <p>Gangnam - 27/01/2021</p>
-                                            <p>Seoul - 27/01/2021</p>
-    
-                                            <span class="footprint-date">August 2023</span>
-                                            <span class="footprint-circle"></span>
-                                        </li>
-                                        <li>
-                                            <h3 class="footprint-heading">Japan</h3>
-                                            <p>27/01/2021 - Fukoka</p>
-    
-                                            <span class="footprint-date">August 2023</span>
-                                            <span class="footprint-circle"></span>
-                                        </li>
-                                        <li>
-                                            <h3 class="footprint-heading">South Korea</h3>
-                                            <p>Incheon - 27/01/2021</p>
-                                            <p>Seoul - 27/01/2021</p>
-                                            <p>Myeongdong - 27/01/2021</p>
-                                            <p>Seoul - 27/01/2021</p>
-                                            <p>Jeju - 27/01/2021</p>
-                                            <p>Ulsan - 27/01/2021</p>
-                                            <p>Gyeonju - 27/01/2021</p>
-                                            <p>Ulsan - 27/01/2021</p>
-                                            
-                                            <span class="footprint-date">July 2023</span>
-                                            <span class="footprint-circle"></span>
-                                        </li>
-                                        <li>
-                                            <h3 class="footprint-heading">Honduras</h3>
-                                            <p>27/01/2021 - Siguatepeque</p>
-                                            <p>27/01/2021 - Comayagua</p>
-                                            <p>27/01/2021 - Tegucigalpa</p>
-                                            <p>27/01/2021 - Santa Lucía</p>
-                                            <p>27/01/2021 - Valle de Ángeles</p>
-                                            <p>27/01/2021 - Cantarranas</p>
-                                            <p>27/01/2021 - Tela</p>
-                                            <p>27/01/2021 - Yoro</p>
-                                            <p>27/01/2021 - San Pedro Sula</p>
-                                            
-                                            <span class="footprint-date">October 2022</span>
-                                            <span class="footprint-circle"></span>
-                                        </li>
-                                        <li>
-                                            <h3 class="footprint-heading">Honduras</h3>
-                                            <p>San Pedro Sula - 27/01/2021</p>
-                                            <p>Los Naranjos - 27/01/2021</p>
-                                            <p>La Lima - 27/01/2021</p>
-                                            
-                                            <span class="footprint-date">September 2022</span>
-                                            <span class="footprint-circle"></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-            
         </div>
 
 
+        
     </div>
+<!-- ------------right-sidebar--------------- -->
+    <div class="right-sidebar">
+        <div class="sidebar-ad">
+            <small>Ad &middot; &middot; &middot;</small>
+            <p>Master the 5 priciples of web design</p>
+            <div>
+                <img src="assets/img/profile.jpg">
+                <img src="assets/img/mi-logo.png">
+            </div>
+            <b>Brand and Demand in Xiaomi</b>
+            <a href="https://www.youtube.com/c/EasyTutorialsVideo?sub_confirmation=1" class="ad-link">Learn More</a>
+        </div>
 
+        <div class="sidebar-useful-links">
+            <a href="#">About</a>
+            <a href="#">Accessiblity</a>
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Advertising</a>
+            <a href="#">Get the App</a>
+            <a href="#">More</a>
 
+            <div class="copyright-msg">
+                <img src="assets/img/logo.png">
+                <p>Postcard &#169; 2023. All right reserved</p>
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<script src="assets/js/scripts.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+<script>
+    let profileMenu = document.getElementById("profileMenu");
+    let optionsMenu = document.getElementById("optionsMenu");
+
+    function toggleMenuProfile() {
+        profileMenu.classList.toggle("open-menu");
+        optionsMenu.classList.remove("open-menu");
+    }
+
+    function toggleMenuOptions() {
+        optionsMenu.classList.toggle("open-menu");
+        profileMenu.classList.remove("open-menu");
+    }
+</script>
+
 
 </body>
 </html>
-
-

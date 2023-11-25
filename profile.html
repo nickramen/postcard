@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postcard 2.0</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="assets/js/scripts.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="explore.html" class="logo"><img src="assets/img/logo.png"></a>
+    
+            <div class="search-box">
+                <img src="assets/img/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+    
+        </div>
+        <div class="navbar-right">
+            <i class="ri-menu-line" onclick="toggleMenuOptions() "title="Menu"></i>
+            <div class="online">
+                <img src="assets/img/profile.jpg" class="nav-profile-img" onclick="toggleMenuProfile()">
+            </div>
+        </div>
+        <!-- --------------- profile-drop-down-menu---------- -->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="assets/img/profile.jpg">
+                    <div>
+                        <h3>@nickramen</h3>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/img/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/img/setting.png">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/img/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/img/display.png">
+                    <p>Display & Accessiblity</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/img/logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+        <!-- --------------- options-drop-down-menu---------- -->
+        <div class="options-menu-wrap" id="optionsMenu">
+            <div class="options-menu">
+                <div class="user-info">
+                    <h3>Menu</h3>
+                </div>
+                <hr>
+                <a href="explore.html" class="options-menu-link">
+                    <span class="icon">
+                        <i class="ri-earth-line"></i>
+                        Explore
+                    </span>
+                </a>
+                <a href="footprint.html" class="options-menu-link">
+                    <span class="icon">
+                        <i class="ri-footprint-line"></i>
+                        Footprint
+                    </span>
+                </a>
+                <a href="postcards.html" class="options-menu-link">
+                    <span class="icon">
+                        <i class="ri-image-2-line"></i>
+                        Postcards
+                    </span>
+                </a>
+                <a href="journal.html" class="options-menu-link active">
+                    <span class="icon">
+                        <i class="ri-article-line"></i>
+                        Journal
+                    </span>
+                </a>
+                <a href="friends.html" class="options-menu-link">
+                    <span class="icon">
+                        <i class="ri-group-2-line"></i>
+                        Friends
+                    </span>
+                </a>
+            </div>
+        </div>
+    
+    </nav>
+
+<!-- -------------- navbar close-------- -->
+
+<div class="container">
+    <div class="profile-main">
+        <div class="profile-container">
+            <img src="assets/img/profile-background.jpeg" width="100%" class="background-pic">
+            <div class="profile-container-inner">
+                <img src="assets/img/profile.jpg" class="profile-pic">
+
+                <div class="profile-grid">
+                    <div>
+                        <h1>@nickramen</h1>
+                        <p><i class="ri-map-pin-line"></i> San Francisco, United States</p>
+                        <br>
+                        <b>I love mangoes and computer</b> 
+                        <div class="mutual-connection">
+                            <img src="assets/img/profile1.jpg">
+                            <span> followed by @dayaplaya</span>
+                        </div>
+                        <div class="profile-btn">
+                            <a href="#" class="primary-btn"><i class="ri-user-follow-fill"></i> Follow</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-profile-info">
+                        <div class="row2">
+                            <div class="column-1" style="width: 100%;">
+                                <ul>
+                                    <li><i class="ri-user-line"></i> Followers<span>52</span></li>
+                                    <li><i class="ri-image-2-line"></i> Postcards<span>23</span></li>
+                                    <li><i class="ri-map-pin-line"></i> Countries<span>9</span></li>
+                                    <li><i class="ri-user-follow-line"></i> Following<span>810</span></li>
+                                    <li><i class="ri-article-line"></i> Journal<span>12</span></li>
+                                    <li><i class="ri-heart-line"></i> Likes<span>205</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+            <div class="sidebar-profile-info-collapsed">
+                <div class="sort-by">
+                    <hr>
+                    <p><span>Profile stats <img src="assets/img/down-arrow.png"></span></p>
+                </div>
+                <div class="profile-description">
+                    <div class="sidebar-profile-info">
+                        <div class="column-1" style="width: 100%;">
+                            <ul>
+                                <li><i class="ri-user-line"></i> Followers<span>52</span></li>
+                                <li><i class="ri-image-2-line"></i> Postcards<span>23</span></li>
+                                <li><i class="ri-map-pin-line"></i> Countries<span>9</span></li>
+                                <li><i class="ri-user-follow-line"></i> Following<span>810</span></li>
+                                <li><i class="ri-article-line"></i> Journal<span>12</span></li>
+                                <li><i class="ri-heart-line"></i> Likes<span>205</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="sort-by">
+            <hr>
+            <p><span>Profile tabs <img src="assets/img/down-arrow.png"></span></p>
+        </div>
+
+        <div class="tabs-sections">
+            <div class="tab-btn">
+                <a href="#" class="secondary-btn tab active"><i class="ri-user-fill"></i> All Activity</a>
+            </div>
+            <div class="tab-btn">
+                <a href="#" class="secondary-btn tab"><i class="ri-footprint-fill"></i> Footprint</a>
+            </div>
+            <div class="tab-btn">
+                <a href="#" class="secondary-btn tab"><i class="ri-image-2-fill"></i> Postcards</a>
+            </div>
+            <div class="tab-btn">
+                <a href="#" class="secondary-btn tab"><i class="ri-article-fill"></i> Journal</a>
+            </div>            
+        </div>
+
+        <div class="sort-by">
+            <hr>
+            <p><span>Profile activity <img src="assets/img/down-arrow.png"></span></p>
+        </div>
+
+        <div class="profile-description">
+            <h2>Most used hashtags</h2>
+            <a href="#" class="skills-btn">#Leadership</a>
+            <a href="#" class="skills-btn">#Web Design</a>
+            <a href="#" class="skills-btn">Development</a>
+            <a href="#" class="skills-btn">Communication</a>
+            <a href="#" class="skills-btn">UI/UX</a>
+            <a href="#" class="skills-btn">Planning</a>
+            <a href="#" class="skills-btn">Coding</a>
+            <a href="#" class="skills-btn">JavaScript</a>
+            <a href="#" class="skills-btn">Python</a>
+            <a href="#" class="skills-btn">Enterprenuorship</a>
+        </div>
+
+        <div class="profile-description">
+            
+        </div>
+
+
+    </div>
+<!-- ------profile-sidebar------ -->
+    <div class="profile-sidebar">
+
+        <div class="sidebar-ad">
+            <small>Ad &middot; &middot; &middot;</small>
+            <p>Master the 5 priciples of web design</p>
+            <div>
+                <img src="assets/img/profile.jpg">
+                <img src="assets/img/mi-logo.png">
+            </div>
+            <b>Brand and Demand in Xiaomi</b>
+            <a href="#" class="ad-link">Learn More</a>
+        </div>
+
+        <div class="sidebar-people">
+            <h3>People you may know</h3>
+            <div class="sidebar-people-row">
+                <img src="assets/img/profile1.jpg">
+                <div>
+                    <h2>Samuel Tony</h2>
+                    <p>Head of Marketing at Alibaba</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+            <div class="sidebar-people-row">
+                <img src="assets/img/profile2.jpg">
+                <div>
+                    <h2>Benjamin Leo</h2>
+                    <p>Head of Marketing at Alibaba</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+            <div class="sidebar-people-row">
+                <img src="assets/img/profile3.jpg">
+                <div>
+                    <h2>Steave Greg</h2>
+                    <p>Head of Marketing at Alibaba</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+            <div class="sidebar-people-row">
+                <img src="assets/img/profile4.jpg">
+                <div>
+                    <h2>Martin Lewis</h2>
+                    <p>Head of Marketing at Alibaba</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+            <div class="sidebar-people-row">
+                <img src="assets/img/profile1.jpg">
+                <div>
+                    <h2>Clarence George</h2>
+                    <p>Head of Marketing at Alibaba</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="profile-footer">
+    <div class="sidebar-useful-links">
+        <a href="#">About</a>
+        <a href="#">Accessiblity</a>
+        <a href="#">Help Center</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Advertising</a>
+        <a href="#">Get the App</a>
+        <a href="#">More</a>
+
+        <div class="copyright-msg">
+            <img src="assets/img/logo.png">
+            <p>Postcard &#169; 2023. All right reserved</p>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    let profileMenu = document.getElementById("profileMenu");
+    let optionsMenu = document.getElementById("optionsMenu");
+
+    function toggleMenuProfile() {
+        profileMenu.classList.toggle("open-menu");
+        optionsMenu.classList.remove("open-menu");
+    }
+
+    function toggleMenuOptions() {
+        optionsMenu.classList.toggle("open-menu");
+        profileMenu.classList.remove("open-menu");
+    }
+</script>
+    
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Asia', 'Africa', 'America', 'Europa', 'Oceania', 'Antartica'],
+            datasets: [{
+            label: 'Countries visited',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>
+
+<script>
+    const ctx2 = document.getElementById('myChart2');
+
+    new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['Postcard', 'Journal', 'Timeline'],
+            datasets: [{
+                label: 'Posted',
+                data: [12, 19, 3],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
+                    ],
+                borderColor: [
+                    'rgb(75, 192, 192)',
+                    'rgb(54, 162, 235)',
+                    'rgb(153, 102, 255)'
+                    ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script> -->
+
+</body>
+</html>
